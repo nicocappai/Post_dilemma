@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->longText('body');
-            $table->string('image');
+            $table->string('img');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');
             $table->unsignedBigInteger('category_id')->nullable();

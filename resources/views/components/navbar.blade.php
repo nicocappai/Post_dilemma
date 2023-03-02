@@ -10,8 +10,11 @@
           <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="{{route('article.create')}}">Crea Articolo</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('article.index')}}">tutti gli articoli</a>
+          </li>
         @guest
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -21,14 +24,14 @@
             <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
             <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
           </ul>
-        </li>   
+        </li>
         @else
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Benvenuto {{Auth::user()->name}}
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('logout')}}" 
+            <li><a class="dropdown-item" href="{{route('logout')}}"
               onclick="event.preventDefault();
               document.getElementById('form-logout').
               submit();">Logout</a></li>
@@ -36,7 +39,7 @@
                 @csrf
               </form>
           </ul>
-        </li>   
+        </li>
         @endguest
           <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>

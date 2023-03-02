@@ -4,15 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth')->except('index', 'show');
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $articles = Article::orderBy('created_at', 'desc')->take(4)->get();
+        return view('article.index' , compact('articles'));
     }
 
     /**
@@ -20,7 +27,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('article.create');
     }
 
     /**
@@ -28,15 +35,37 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        'title' => 'required|min:3',
+        'subtitle' => 'required|min:3',
+        'body' => 'required|min:3',
+        'category' => 'required',
+        ]);
+
+      $article=  Article::create([
+          'title'=>$request->title,
+          'subtitle'=>$request->subtitle,
+          'body'=>$request->body,
+          'img'=> $request->has('img') ? $request->file('img')->store('public') : '/img/default.png',
+          'category_id'=>$request->category,
+          'user_id'=> Auth::user()->id,
+
+        ]);
+
+
+
+
+
+        return redirect(route('homepage'))->with('message', 'Articolo creato');
     }
+
 
     /**
      * Display the specified resource.
      */
     public function show(Article $article)
     {
-        //
+
     }
 
     /**
