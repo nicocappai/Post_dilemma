@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-12 text-center">
                 <h1>The Aulab Post</h1>
             </div>
         </div>
