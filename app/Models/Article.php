@@ -26,6 +26,5 @@ class Article extends Model
         'img',
         'user_id',
         'category_id'
-
     ];
 }

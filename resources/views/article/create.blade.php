@@ -50,7 +50,7 @@
                         <label  class="form-label">Categoria:</label>
                         <select name="category" id="category" class="form-control text-capitalize">
                             @foreach ($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            <option value="{{$category->$id}}">{{$category->name}}</option>
 
                             @endforeach
                         </select>

@@ -39,7 +39,7 @@ class ArticleController extends Controller
         'title' => 'required|min:3',
         'subtitle' => 'required|min:3',
         'body' => 'required|min:3',
-        'category' => 'required',
+        'category_id' => 'required',
         ]);
 
       $article=  Article::create([
