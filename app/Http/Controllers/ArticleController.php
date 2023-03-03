@@ -39,14 +39,14 @@ class ArticleController extends Controller
         'title' => 'required|min:3',
         'subtitle' => 'required|min:3',
         'body' => 'required|min:3',
-        'category_id' => 'required',
+        'category' => 'required',
         ]);
 
-      $article=  Article::create([
+           Article::create([
           'title'=>$request->title,
           'subtitle'=>$request->subtitle,
           'body'=>$request->body,
-          'img'=> $request->has('img') ? $request->file('img')->store('public') : '/img/default.png',
+          'img'=> $request->file('img')->store('public/img'),
           'category_id'=>$request->category,
           'user_id'=> Auth::user()->id,
 
@@ -56,7 +56,7 @@ class ArticleController extends Controller
 
 
 
-        return redirect(route('homepage'))->with('message', 'Articolo creato');
+        return redirect(route('homepage'))->with('message','Articolo creato');
     }
 
 

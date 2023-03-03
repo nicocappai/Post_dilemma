@@ -1,11 +1,8 @@
 <x-layout>
-
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1>Tutti gli articoli</h1>
-
-
+                <h1 class="font">Tutti gli articoli</h1>
             </div>
         </div>
     </div>
@@ -24,8 +21,8 @@
                           <h5 class="card-title">{{$article->title}}</h5>
                           <p class="card-text">{{$article->subtitle}}</p>
                           <p class="card-text">{{$article->body}}</p>
-                          <p class="card-text">Categoria:<a href="{{route('article.category', $article->category)}}">{{$article->category->name}}</a></p>
-                          <p class="card-text">Creato da : <a href="{{route('user.article', $article->user->id)}}">{{$article->user->name}}</a></p>
+                          <p class="card-text">Categoria:{{$article->category->name}}</p>
+                          <p class="card-text">Creato da :{{$article->user->name}}</p>
                           <a href="" class="btn btn-primary">Dettaglio</a>
                         </div>
                       </div>

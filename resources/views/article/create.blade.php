@@ -14,7 +14,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
 
-                <h1>
+                <h1 class="font">
                     Crea Articolo
                 </h1>
             </div>
@@ -50,7 +50,7 @@
                         <label  class="form-label">Categoria:</label>
                         <select name="category" id="category" class="form-control text-capitalize">
                             @foreach ($categories as $category)
-                            <option value="{{$category->$id}}">{{$category->name}}</option>
+                            <option value="{{$category->id}}">{{$category->name}}</option>
 
                             @endforeach
                         </select>
