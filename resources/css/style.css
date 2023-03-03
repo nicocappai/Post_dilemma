@@ -12,7 +12,7 @@
 }
 
 .alt{
-    align-items: center;
+    align-items: center;;
 }
 .search{
     border-radius: 54px;
@@ -20,7 +20,7 @@
 }
 .btn-search{
     border-radius: 54px;
-    
+
 }
 .background-header{
     background-image: url(/storage/app/public/artem-gavrysh-F6-U5fGAOik-unsplash.jpg);
@@ -56,19 +56,19 @@ body{
     border-radius: 25px;
     transition: .4s ease-in-out;
   }
-  
+
   .form:hover {
     transform: scale(1.05);
     border: 1px solid black;
   }
-  
+
   #heading {
     text-align: center;
     margin: 2em;
     color: rgb(255, 255, 255);
     font-size: 1.2em;
   }
-  
+
   .field {
     display: flex;
     align-items: center;
@@ -82,13 +82,13 @@ body{
     background-color: #171717;
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
   }
-  
+
   .input-icon {
     height: 1.3em;
     width: 1.3em;
     fill: white;
   }
-  
+
   .input-field {
     background: none;
     border: none;
@@ -96,14 +96,14 @@ body{
     width: 100%;
     color: #d3d3d3;
   }
-  
+
   .form .btn {
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin-top: 2.5em;
   }
-  
+
   .button1 {
     padding: 0.5em;
     padding-left: 1.1em;
@@ -116,7 +116,7 @@ body{
     background-color: #252525;
     color: white;
   }
-  
+
   .button1:hover {
     background-color: black;
     color: white;
@@ -131,7 +131,7 @@ body{
     background-color: #252525;
     color: white;
   }
-  
+
   .button3:hover {
     background-color: red;
     color: white;
@@ -156,13 +156,13 @@ body{
     gap: 0.6em;
     font-weight: bold;
   }
-  
+
   button .arrow-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   button .arrow {
     margin-top: 1px;
     width: var(--arrow-width);
@@ -171,7 +171,7 @@ body{
     position: relative;
     transition: 0.2s;
   }
-  
+
   button .arrow::before {
     content: "";
     box-sizing: border-box;
@@ -185,15 +185,15 @@ body{
     padding: 3px;
     transform: rotate(-45deg);
   }
-  
+
   button:hover {
     background-color: var(--hover-color);
   }
-  
+
   button:hover .arrow {
     background: var(--secondary-color);
   }
-  
+
   button:hover .arrow:before {
     right: 0;
   }
