@@ -1,17 +1,12 @@
 <x-layout>
-    @if (session('message'))
-    <div class="alert alert-success">
-        <p class="m-0">{{session('message')}}</p>
-    </div>
-    @endif
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="font">Home</h1>
+                <h1 class="font">Tutti gli articoli</h1>
             </div>
         </div>
     </div>
-    
+
     <div class="container">
         <div class="row">
             @foreach ($articles as $article )
@@ -27,12 +22,8 @@
                           <p class="card-text">{{$article->subtitle}}</p>
                           <p class="card-text">{{$article->body}}</p>
                           <p class="card-text">Categoria:{{$article->category->name}}</p>
-                        <div class="card-footer">
-
-                            redatto il {{$article->created_at->format('d/m/Y')}}da{{$article->user->name}}
-                            <a href="" class="btn btn-success">leggi</a>
-                            
-                        </div>
+                          <p class="card-text">Creato da :{{$article->user->name}}</p>
+                          <a href="" class="btn btn-primary">Dettaglio</a>
                         </div>
                       </div>
                     </div>
