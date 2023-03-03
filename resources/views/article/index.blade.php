@@ -21,9 +21,10 @@
                           <h5 class="card-title">{{$article->title}}</h5>
                           <p class="card-text">{{$article->subtitle}}</p>
                           <p class="card-text">{{$article->body}}</p>
-                          <p class="card-text">Categoria:{{$article->category->name}}</p>
-                          <p class="card-text">Creato da :{{$article->user->name}}</p>
-                          <a href="" class="btn btn-primary">Dettaglio</a>
+                          <p class="card-text">Categoria: <a href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
+                          <div class="card-footer">Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
+                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-success">Leggi</a>
+                          </div>
                         </div>
                       </div>
                     </div>

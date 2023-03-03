@@ -44,6 +44,17 @@
         </li>
         @endguest
         </ul>
+        <li class="nav-item dropdown text-white list-unstyled">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorie
+          </a>
+          <ul class="dropdown-menu">
+            @foreach ($categories as $category)
+            <li><a class="dropdown-item" href="{{route('article.category' , $category)}}">{{$category->name}}</a></li>
+            <li><hr class="dropdown-divider"></li>
+            @endforeach
+          </ul>
+        </li>
       </div>
     </div>
   </nav>
