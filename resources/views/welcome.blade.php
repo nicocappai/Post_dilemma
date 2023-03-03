@@ -11,7 +11,16 @@
             </div>
         </div>
     </div>
-    
+    <div class="row justify-content-center align-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <form class="d-flex " role="search">
+                <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success btn-search" type="submit">Search</button>
+            </form>
+        </div>
+
+    </div>
+
     <div class="container">
         <div class="row">
             @foreach ($articles as $article )
@@ -30,7 +39,7 @@
                         <div class="card-footer">
                           <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
                             <a href="{{route('article.show', compact('article'))}}" class="btn btn-success">Leggi</a>
-                            
+
                         </div>
                         </div>
                       </div>
