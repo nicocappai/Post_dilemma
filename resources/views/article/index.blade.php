@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="font">Tutti gli articoli</h1>

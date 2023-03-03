@@ -12,11 +12,43 @@
 </head>
 <body>
     <x-navbar />
+    {{-- spinner fase di caricamento --}}
+    <div id="loading" class="d-flex justify-content-center align-content-center my-mio">
+        <div class="loader">
+            <div class="cell d-0"></div>
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+          
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+            
+            
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+            
+            
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+            
+            
+          </div>
+    </div>
     <x-header />
-    <div class="min-vh-100">
+    
+    <div id="pageContent" class="d-none">
+
+
+    <div >
         {{$slot}}
     </div>
+    
     <x-footer />
+
+
+</div>
+
+
+
     <script src="https://kit.fontawesome.com/8234f4d33d.js" crossorigin="anonymous"></script>
 </body>
 </html>

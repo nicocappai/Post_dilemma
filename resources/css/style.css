@@ -138,62 +138,176 @@ body{
   }
 
   /* button di registrazione */
-  button {
-    --primary-color: #645bff;
-    --secondary-color: #fff;
-    --hover-color: #111;
-    --arrow-width: 10px;
-    --arrow-stroke: 2px;
-    box-sizing: border-box;
-    border: 0;
-    border-radius: 20px;
-    color: var(--secondary-color);
-    padding: 1em 1.8em;
-    background: var(--primary-color);
+  .btn-register {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
     display: flex;
-    transition: 0.2s background;
     align-items: center;
-    gap: 0.6em;
-    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
   }
+  .btn-register:hover {
+    color: #fefdfd;
+  }
+  
+  .btn-register span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-register svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .btn-register:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  .btn-register:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  .btn-register:hover span {
+    transform: translateX(5em);
+  }
+  
+  .btn-register:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  
+  
+  .img{
+    background-image: url(/public/storage/img/artem-gavrysh-F6-U5fGAOik-unsplash.jpg);
+  }
+  .padding-dropdown{
+    padding-bottom: 0% !important;
+  }
+  .backg{
+    background-color:#678983
+  }
+  textarea{
+    height: 60px;
+  }
+  a{
+    text-decoration: none;
+  }
+  
 
-  button .arrow-wrapper {
+
+
+  /* spinerrr */
+
+
+
+  .loader {
+    --cell-size: 52px;
+    --cell-spacing: 1px;
+    --cells: 3;
+    --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    width: var(--total-size);
+    height: var(--total-size);
   }
-
-  button .arrow {
-    margin-top: 1px;
-    width: var(--arrow-width);
-    background: var(--primary-color);
-    height: var(--arrow-stroke);
-    position: relative;
-    transition: 0.2s;
-  }
-
-  button .arrow::before {
-    content: "";
+  
+  .cell {
+    flex: 0 0 var(--cell-size);
+    margin: var(--cell-spacing);
+    background-color: transparent;
     box-sizing: border-box;
-    position: absolute;
-    border: solid var(--secondary-color);
-    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
-    display: inline-block;
-    top: -3px;
-    right: 3px;
-    transition: 0.2s;
-    padding: 3px;
-    transform: rotate(-45deg);
+    border-radius: 4px;
+    animation: 1.5s ripple ease infinite;
   }
-
-  button:hover {
-    background-color: var(--hover-color);
+  
+  .cell.d-1 {
+    animation-delay: 100ms;
   }
-
-  button:hover .arrow {
-    background: var(--secondary-color);
+  
+  .cell.d-2 {
+    animation-delay: 200ms;
   }
-
-  button:hover .arrow:before {
-    right: 0;
+  
+  .cell.d-3 {
+    animation-delay: 300ms;
   }
+  
+  .cell.d-4 {
+    animation-delay: 400ms;
+  }
+  
+  .cell:nth-child(1) {
+    --cell-color: #00FF87;
+  }
+  
+  .cell:nth-child(2) {
+    --cell-color: #0CFD95;
+  }
+  
+  .cell:nth-child(3) {
+    --cell-color: #17FBA2;
+  }
+  
+  .cell:nth-child(4) {
+    --cell-color: #23F9B2;
+  }
+  
+  .cell:nth-child(5) {
+    --cell-color: #30F7C3;
+  }
+  
+  .cell:nth-child(6) {
+    --cell-color: #3DF5D4;
+  }
+  
+  .cell:nth-child(7) {
+    --cell-color: #45F4DE;
+  }
+  
+  .cell:nth-child(8) {
+    --cell-color: #53F1F0;
+  }
+  
+  .cell:nth-child(9) {
+    --cell-color: #60EFFF;
+  }
+  
+  /*Animation*/
+  @keyframes ripple {
+    0% {
+      background-color: transparent;
+    }
+  
+    30% {
+      background-color: var(--cell-color);
+    }
+  
+    60% {
+      background-color: transparent;
+    }
+  
+    100% {
+      background-color: transparent;
+    }
+  }
+   .my-mio{
+    margin: 40vh;
+   }

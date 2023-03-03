@@ -4,21 +4,21 @@
         <p class="m-0">{{session('message')}}</p>
     </div>
     @endif
-    <div class="container-fluid">
+  
+    <div class="row justify-content-center align-content-center my-5">
+        <div class="col-12 col-md-8 col-lg-6">
+            <form class="d-flex " role="search ">
+                <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success btn-search" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="font">Home</h1>
             </div>
         </div>
-    </div>
-    <div class="row justify-content-center align-content-center">
-        <div class="col-12 col-md-8 col-lg-6">
-            <form class="d-flex " role="search">
-                <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success btn-search" type="submit">Search</button>
-            </form>
-        </div>
-
     </div>
 
     <div class="container">
