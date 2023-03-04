@@ -33,7 +33,6 @@
             
           </div>
     </div>
-    <x-header />
     
     <div id="pageContent" class="d-none">
 

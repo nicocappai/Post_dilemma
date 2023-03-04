@@ -311,3 +311,11 @@ body{
    .my-mio{
     margin: 40vh;
    }
+
+   /* background home */
+   .bg-home {
+    background-image: url(/public/images/0Znnun1BI6uJyD3sQzbNm1ogjMohitHFA64jmiEA.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+   }

@@ -4,15 +4,19 @@
         <p class="m-0">{{session('message')}}</p>
     </div>
     @endif
-  
-    <div class="row justify-content-center align-content-center my-5">
-        <div class="col-12 col-md-8 col-lg-6">
-            <form class="d-flex " role="search ">
+ 
+<div class="container-fluid bg-home">
+    <div class="row justify-content-center align-items-center my-5">
+        <div class="col-12 col-md-8 col-lg-6 pt-5 my-5">
+            <h1 class="text-center my-5 pt-5">Welcome</h1>
+            <form class="d-flex" role="search">
                 <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success btn-search" type="submit">Search</button>
             </form>
         </div>
     </div>
+</div>
+
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-12 text-center">

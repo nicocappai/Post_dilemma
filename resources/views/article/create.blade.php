@@ -17,7 +17,7 @@
             <div class="col-12 col-md-8 col-lg-6">
                 <form class="form" method="post" enctype="multipart/form-data" action="{{route('article.store')}}">
                     @csrf
-                    <p id="heading">Creea Articolo</p>
+                    <p id="heading">Crea Articolo</p>
                     <div class="field">
                         <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         </svg>
@@ -38,7 +38,7 @@
                     <div class="field">
                     <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     </svg>
-                    <textarea name="body" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="body" id="" cols="30" rows="10" class="form-control" placeholder="Inserisci il testo"></textarea>
                     </div>
                     <div class="mb-3">
                         <label  class="form-label text-white">Categoria:</label>
