@@ -33,16 +33,17 @@
                     <div class="field">
                     <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     </svg>
-                      <input autocomplete="off" placeholder="img" class="input-field" type="file" name="img">
+                      <input autocomplete="off" class="input-field bg-img" type="file" name="img">
                     </div>
                     <div class="field">
                     <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     </svg>
-                    <textarea name="body" id="" cols="30" rows="10" class="form-control" placeholder="Inserisci il testo"></textarea>
+                    <textarea name="body" id="" cols="30" rows="10" class="form-control bg-textarea text-white
+                     bg-dark" placeholder="Inserisci il testo"></textarea>
                     </div>
                     <div class="mb-3">
                         <label  class="form-label text-white">Categoria:</label>
-                        <select name="category" id="category" class="form-control text-capitalize">
+                        <select name="category" id="category" class="form-control text-capitalize  bg-categoria bg-dark">
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
             

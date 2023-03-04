@@ -2,8 +2,28 @@
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .nav-border{
     border-radius: 54px;
+    
+    
 }
+.margin-benvenuto{
+  margin-left: 0%;
+}
+
+@media screen and (max-width:700px) {
+  .nav-border{
+    border-radius: 10px;
+   
+    
+}
+.margin-benvenuto{
+  margin-left: -31px;
+}
+   
+}
+
 .bg_color{
     background-color:rgba(24, 20, 20, 0.907);
 }
@@ -20,7 +40,6 @@
 }
 .btn-search{
     border-radius: 54px;
-
 }
 .background-header{
     background-image: url(/storage/app/public/artem-gavrysh-F6-U5fGAOik-unsplash.jpg);
@@ -44,7 +63,7 @@ body{
 /* .bg-1{
   background-color: rgba(184, 25, 25, 0.61);
 } */
-/* login form */
+/* form */
 .form {
     display: flex;
     flex-direction: column;
@@ -207,8 +226,25 @@ body{
   textarea{
     height: 60px;
   }
+  .bg-textarea{
+    background-color: #171717 !important;
+    border: 1px solid #171717;
+    
+  }
+  .bg-textarea:hover{
+    background-color: #171717;
+    border: 1px solid #171717;
+    color: white;
+    
+  }
+  .bg-categoria{
+    background-color: #171717 !important;
+    border: 1px solid #b7b5b5;
+    color: white !important;
+  }
   a{
     text-decoration: none;
+    color: rgb(0, 119, 255);
   }
   
 
@@ -314,8 +350,142 @@ body{
 
    /* background home */
    .bg-home {
-    background-image: url(/public/images/0Znnun1BI6uJyD3sQzbNm1ogjMohitHFA64jmiEA.jpg);
+    background-image:   linear-gradient(0deg, rgba(4,2,41,0) 40%, rgb(255, 255, 255, 61) 100%), url(/public/images/artem-gavrysh-F6-U5fGAOik-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 0%;
     height: 100vh;
    }
+  /* card */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+  *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+  }
+  :root{
+    --color-text: #616161;
+    --color-text-btn: #ffffff;
+    --card1-gradient-color1: #f12711;
+    --card1-gradient-color2: #f5af19;
+    --card2-gradient-color1: #7F00FF;
+    --card2-gradient-color2: #E100FF;
+    --card3-gradient-color1: #3f2b96;
+    --card3-gradient-color2: #a8c0ff;
+    --card4-gradient-color1: #11998e;
+    --card4-gradient-color2: #38ef7d;
+  }
+    .card-wrap{
+      width: 320px;
+      background: #fff;
+      border-radius: 20px;
+      border: 5px solid #fff;
+      overflow: hidden;
+      color: var(--color-text);
+      box-shadow:  5px 5px 15px #5a5a5a,
+      -5px -5px 15px #ffffff;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      height: 520px ;
+    }
+    .card-wrap:hover{
+      transform: scale(1.1);
+    }
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .card-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+  }
+  .card-text{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .card-btn{
+    border: none;
+    border-radius: 100px;
+    padding: 5px 30px;
+    color: #fff;
+    background-color: #171717;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .card-btn:hover{
+    background-color:  rgb(0, 119, 255);
+    color: white
+  }
+  .card-header.one{
+    background: linear-gradient(to bottom left, var(--card1-gradient-color1), var(--card1-gradient-color2));
+  }
+  .card-header.two{
+    background: linear-gradient(to bottom left, var(--card2-gradient-color1), var(--card2-gradient-color2));
+  }
+  .card-header.three{
+    background: linear-gradient(to bottom left, var(--card3-gradient-color1), var(--card3-gradient-color2));
+  }
+  .card-header.four{
+    background: linear-gradient(to bottom left, var(--card4-gradient-color1), var(--card4-gradient-color2));
+  }
+  
+  .card-btn.one{
+    background: linear-gradient(to left, var(--card1-gradient-color1), var(--card1-gradient-color2));
+  }
+  .card-btn.two{
+    background: linear-gradient(to left, var(--card2-gradient-color1), var(--card2-gradient-color2));
+  }
+  .card-btn.three{
+    background: linear-gradient(to left, var(--card3-gradient-color1), var(--card3-gradient-color2));
+  }
+  .card-btn.four{
+    background: linear-gradient(to left, var(--card4-gradient-color1), var(--card4-gradient-color2));
+  }
+
+
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
+  display: block;
+  width: 19.4em;
+  overflow: auto;
+  height: 4em;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 1px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.maargin{
+  margin-top: 10.4px;
+}
+
+li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+
+
+
