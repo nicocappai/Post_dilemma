@@ -1,5 +1,6 @@
 <x-layout>
-    <div class="container-fluid my-5">
+<body class="backg">
+    <div class="container-fluid my-4">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="font">Tutti gli articoli</h1>
@@ -20,20 +21,16 @@
                         <div class="mostly-customized-scrollbar my-3">
                           <p class="card-text  ">{{$article->body}}</p>
                       </div>
-                        <p class="card-text">Categoria: <a href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
+                        <p class="card-text">Categoria: <a class="href-color" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
                       <div class="card-footer text-center">
-                        <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
+                        <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a class="href-color" href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
                           <a href="{{route('article.show', compact('article'))}}" class="btn card-btn">Leggi</a>
                       </div>
                       </div>
                 </div>
           </div>
-
           @endforeach
-
       </div>
-
   </div>
-
-
+</body>
 </x-layout>

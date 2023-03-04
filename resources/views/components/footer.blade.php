@@ -1,9 +1,36 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start bg_color-footer text-muted font ">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Right -->
-    </section>
+   <!-- Section: Social media -->
+   <section class="d-flex justify-content-center justify-content-lg-between text-white p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Collegati con noi sui nostri social:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
     <!-- Section: Social media -->
 
     <!-- Section: Links  -->
@@ -15,11 +42,10 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4 text-white">
-              <i class="fas fa-gem me-3 text-white"></i>Company name
+              <i class="fas fa-gem me-3 text-white"></i>Dilemma.it
             </h6>
             <p class="text-white">
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+              Punto di riferimento nel settore degli annunci gratuiti, è tra i primi 100 siti più visitati in Italia.
             </p>
           </div>
           <!-- Grid column -->
@@ -28,19 +54,19 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase text-white fw-bold mb-4">
-              Products
+              Servizi
             </h6>
             <p>
-              <a href="#!" class="text-white">Angular</a>
+              <a href="{{route('article.create')}}" class="text-white">Crea annuncio</a>
             </p>
             <p>
-              <a href="#!" class="text-white">React</a>
+              <a href="#!" class="text-white">Gestione annunci</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Vue</a>
+              <a href="#!" class="text-white">Crea il tuo alert</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Laravel</a>
+              <a href="#!" class="text-white">Gestione alert</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -49,19 +75,19 @@
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase text-white fw-bold mb-4">
-              Useful links
+              Assistenza
             </h6>
             <p>
-              <a href="#!" class="text-white">Pricing</a>
+              <a href="#!" class="text-white">Chi siamo</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Settings</a>
+              <a href="#!" class="text-white">Lavora con noi</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Orders</a>
+              <a href="#!" class="text-white">Magazine</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Help</a>
+              <a href="#!" class="text-white">Infojobs</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -69,7 +95,7 @@
           <!-- Grid column -->
           <div class=" text-white col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4 text-white">Contact</h6>
+            <h6 class="text-uppercase fw-bold mb-4 text-white">Contatti</h6>
             <p><i class="fas fa-home me-3 text-white"></i> New York, NY 10012, US</p>
             <p>
               <i class="fas fa-envelope me-3 text-white"></i>
@@ -84,6 +110,13 @@
       </div>
     </section>
     <!-- Section: Links  -->
+
+    {{-- Google maps --}}
+
+    <div class="container mappa p-3">
+
+      <iframe class="w-100 h-100 radius" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.8112892082127!2d16.84793065070372!3d41.1168122791882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347e8bcca130e17%3A0x47ce9d5124576e73!2sAulab%20Hackademy!5e0!3m2!1sit!2sit!4v1676249790324!5m2!1sit!2sit"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
   </footer>
   <!-- Footer -->

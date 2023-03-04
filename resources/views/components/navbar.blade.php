@@ -51,6 +51,7 @@
                             <ul>
                                 <li class="nav-item dropdown align-content-centerd maargin">
                                     <a class="nav-link dropdown-toggle text-white margin-benvenuto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-user mx-1"></i>
                                         Benvenuto {{Auth::user()->name}}
                                     </a>
                                     <ul class="dropdown-menu">
@@ -75,3 +76,5 @@
 
     </div>
 </div>
+
+
