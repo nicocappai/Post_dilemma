@@ -7,7 +7,7 @@
     width: 200px;
     border: 1px solid black;
     background: black;
-    z-index: 101;
+    z-index: 1;
     border-radius: 5px;
     transition: all 0.3s ease;
     transform: translateX(100%);
@@ -39,5 +39,5 @@
 }
 .style-switcher .day-night
 {
-    top: 55px;
+    top: 50px;
 }

@@ -1,21 +1,27 @@
 <x-layout>
- <body class=" back-show">
-    <div class="container my-2 test-show">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="text-center">
+    <body class=" back-show">
+        <div class="container my-2 test-show">
+            <div class="row my-5 ">
+                <div class="col-5 ">
+                    <img src="{{Storage::url($article->img)}}" class="img-fluid box-radius " height="220vh" width="280vh">
+                </div>
+                <div class="col-12 col-md-5 text-center">
                     <h2 class="my-4">{{$article->title}}</h2>
-                    <img src="{{Storage::url($article->img)}}" class="img-fluid rounded-start" alt="...">
                     <p class="card-text pt-3">{{$article->body}}</p>
                     <div class="my-0">
                         <p>Redatto da {{$article->user->name}} il {{$article->created_at->format('d/m/Y')}}</p>
+
                     </div>
-                </div>
-                <div class="text-center">
-                   <a href="{{route('article.index')}}" class="btn card-btn text-white my-5">Torna indietro</a>
+                    <a href="{{route('article.index')}}" class="btn card-btn text-white">Torna indietro</a>
                 </div>
             </div>
         </div>
-    </div>   
- </body>
+    </body>
+
+
 </x-layout>
+
+
+
+
+

@@ -1,20 +1,20 @@
 <div class="container-fluid font ">
     <div class="row justify-content-center  ">
         <div class="col-12 col-md-8 col-lg-12 ">
-            <nav class="navbar navbar-expand-lg bg_color nav-border">
+            <nav class="navbar navbar-expand-lg bg_color nav-border ">
                 <div class="container-fluid">
                     <p class="navbar-brand text-success m-2">Dilemma.it</p>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                     
+
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
                             </li>
                             @guest
-                          
+
                             @else
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{route('article.index')}}">Tutti gli articoli</a>
@@ -31,7 +31,7 @@
                                     </ul>
                                 </div>
                                 @endguest
-                                
+
                             </ul>
                             @guest
                             <ul>
@@ -53,8 +53,8 @@
                                         Benvenuto {{Auth::user()->name}}
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="{{route('article.create')}}">Crea Articolo</a></li>   
-                                        <li><hr class="dropdown-divider"></li> 
+                                        <li><a class="dropdown-item" href="{{route('article.create')}}">Crea Articolo</a></li>
+                                        <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{{route('logout')}}"
                                             onclick="event.preventDefault();
                                             document.getElementById('form-logout').
