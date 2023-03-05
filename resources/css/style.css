@@ -1,3 +1,20 @@
+:root
+{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+}
+
+body.dark {
+    color: linear-gradient(#141e30, #0e1721);
+    background: rgba(26, 24, 24, 0.933);
+    color: #198754;
+
+
+}
+
 
 .navbar{
     margin-top: 20px;
@@ -5,13 +22,14 @@
     margin-right: 20px;
     z-index: 2;
     /* position: fixed; */
+
   }
 
 
   .nav-border{
     border-radius: 20px;
-    
-    
+
+
 }
 .margin-benvenuto{
   margin-left: -15%;
@@ -20,13 +38,13 @@
 @media screen and (max-width:700px) {
   .nav-border{
     border-radius: 10px;
-   
-    
+
+
 }
 .margin-benvenuto{
   margin-left: -31px;
 }
-   
+
 }
 
 .bg-welcome{
@@ -187,46 +205,46 @@ body{
   .btn-register:hover {
     color: #fefdfd;
   }
-  
+
   .btn-register span {
     display: block;
     margin-left: 0.3em;
     transition: all 0.3s ease-in-out;
   }
-  
+
   .btn-register svg {
     display: block;
     transform-origin: center center;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .btn-register:hover .svg-wrapper {
     animation: fly-1 0.6s ease-in-out infinite alternate;
   }
-  
+
   .btn-register:hover svg {
     transform: translateX(1.2em) rotate(45deg) scale(1.1);
   }
-  
+
   .btn-register:hover span {
     transform: translateX(5em);
   }
-  
+
   .btn-register:active {
     transform: scale(0.95);
   }
-  
+
   @keyframes fly-1 {
     from {
       transform: translateY(0.1em);
     }
-  
+
     to {
       transform: translateY(-0.1em);
     }
   }
-  
-  
+
+
   .img{
     background-image: url(/public/storage/img/artem-gavrysh-F6-U5fGAOik-unsplash.jpg);
   }
@@ -242,13 +260,13 @@ body{
   .bg-textarea{
     background-color: #171717 !important;
     border: 1px solid #171717;
-    
+
   }
   .bg-textarea:hover{
     background-color: #171717;
     border: 1px solid #171717;
     color: white;
-    
+
   }
   .bg-categoria{
     background-color: #171717 !important;
@@ -259,7 +277,7 @@ body{
     text-decoration: none;
     color: rgb(0, 119, 255);
   }
-  
+
 
 
 
@@ -277,7 +295,7 @@ body{
     width: var(--total-size);
     height: var(--total-size);
   }
-  
+
   .cell {
     flex: 0 0 var(--cell-size);
     margin: var(--cell-spacing);
@@ -286,73 +304,73 @@ body{
     border-radius: 4px;
     animation: 1.5s ripple ease infinite;
   }
-  
+
   .cell.d-1 {
     animation-delay: 100ms;
   }
-  
+
   .cell.d-2 {
     animation-delay: 200ms;
   }
-  
+
   .cell.d-3 {
     animation-delay: 300ms;
   }
-  
+
   .cell.d-4 {
     animation-delay: 400ms;
   }
-  
+
   .cell:nth-child(1) {
     --cell-color: #5cb85c;
   }
-  
+
   .cell:nth-child(2) {
     --cell-color: #5cb85c;
   }
-  
+
   .cell:nth-child(3) {
     --cell-color: #5cb85c;
   }
-  
+
   .cell:nth-child(4) {
     --cell-color: #5cb85c;
   }
-  
+
   .cell:nth-child(5) {
     --cell-color:#5cb85c;
   }
-  
+
   .cell:nth-child(6) {
     --cell-color:#5cb85c;
   }
-  
+
   .cell:nth-child(7) {
     --cell-color:#5cb85c;
   }
-  
+
   .cell:nth-child(8) {
     --cell-color:#5cb85c;
   }
-  
+
   .cell:nth-child(9) {
     --cell-color:#5cb85c;
   }
-  
+
   /*Animation*/
   @keyframes ripple {
     0% {
       background-color: transparent;
     }
-  
+
     30% {
       background-color: var(--cell-color);
     }
-  
+
     60% {
       background-color: transparent;
     }
-  
+
     100% {
       background-color: transparent;
     }
@@ -420,7 +438,7 @@ body{
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 20px;
-    
+
   }
   .card-text{
     text-align: center;
@@ -452,7 +470,7 @@ body{
   .card-header.four{
     background: linear-gradient(to bottom left, var(--card4-gradient-color1), var(--card4-gradient-color2));
   }
-  
+
   .card-btn.one{
     background: linear-gradient(to left, var(--card1-gradient-color1), var(--card1-gradient-color2));
   }
@@ -509,7 +527,7 @@ li{
 
 .radius{
   border-radius: 20px;
-  
+
 }
 
 /* immagini card sistemate */
@@ -544,4 +562,11 @@ li{
 
 .test-show{
   color: #000;
+}
+
+/*linea counter*/
+.linear-counter{
+    width: 150px;
+
+    left: 130px;
 }

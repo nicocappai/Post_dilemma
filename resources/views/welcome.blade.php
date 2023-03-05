@@ -4,14 +4,14 @@
         <p class="m-0">{{session('message')}}</p>
     </div>
     @endif
- 
+
 <div class="container-fluid bg-home">
     <div class="row justify-content-center align-items-center my-5">
         <div class="col-12 col-md-8 col-lg-6 pt-5 my-5">
             <h1 class="text-center text-white my-5 pt-5 font-inserire">Inserire un annuncio su <br> Dilemma.it é
               <div class="container pt-3">
                 <div class="row">
-                  <div class="col-12 col-md-4">  
+                  <div class="col-12 col-md-4">
                     <i class="fa-regular fa-face-laugh-beam"></i>
                     <h3>Facile</h3>
                   </div>
@@ -22,7 +22,7 @@
                   <div class="col-12 col-md-4">
                     <i class="fa-sharp fa-solid fa-lock"></i>
                     <h3>Sicuro</h3>
-                  </div>  
+                  </div>
                 </div>
               </div>
             </h1>
@@ -73,20 +73,27 @@
     <div class="row">
       <div class="col-12 col-md-4">
         <div class="d-flex justify-content-center align-items-center"><p class="number mb-0">+</p><p id="firstNumber" class="number mb-0">0</p><p class="number mb-0">%</p></div>
-        <div class="d-flex justify-content-lg-center">-----------------</div>
-        <div class="d-flex justify-content-center align-items-center"><p class="ms-2">50% di visualizzazioni in più rispetto agli annunci display tradizionali</p></div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class=" border-bottom linear-counter"></div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center my-3"><p class="ms-2">50% di visualizzazioni in più rispetto agli annunci display tradizionali</p></div>
       </div>
       <div class="col-12 col-md-4">
         <div class="d-flex justify-content-center align-items-center"><p id="secondNumber" class="number mb-0">0</p><p class="number mb-0">X</p></div>
-        <div class="d-flex justify-content-lg-center">-----------------</div>
-        <div class="d-flex justify-content-center align-items-center"><p class="ms-2">Tasso di coinvolgimento 10 volte superiore rispetto agli annunci display tradizionali</p></div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class=" border-bottom linear-counter"></div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center my-3 "><p class="ms-2">Tasso di coinvolgimento 10 volte superiore rispetto agli annunci display tradizionali</p></div>
       </div>
       <div class="col-12 col-md-4">
         <div class="d-flex justify-content-center align-items-center"><p class="number mb-0">+</p><p id="thirdNumber" class="number mb-0">0</p><p class="number mb-0">%</p></div>
-        <div class="d-flex justify-content-lg-center">-----------------</div>
-        <div class="d-flex justify-content-center align-items-center"><p class="ms-2">Intenzione di acquisto superiore del 18% rispetto agli annunci display tradizionali</p></div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class=" border-bottom linear-counter"></div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center my-3"><p class="ms-2">Intenzione di acquisto superiore del 18% rispetto agli annunci display tradizionali</p></div>
       </div>
     </div>
-  </div>    
+  </div>
 
 </x-layout>
