@@ -426,10 +426,9 @@ body{
       overflow: hidden;
       color: var(--color-text);
       box-shadow:  5px 5px 15px #5a5a5a,
-      -5px -5px 15px #ffffff;
+      -5px -5px 15px #ffffff1e;
       cursor: pointer;
       transition: all .2s ease-in-out;
-      height: 520px ;
     }
     .card-wrap:hover{
       transform: scale(1.1);

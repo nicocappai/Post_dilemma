@@ -11,10 +11,9 @@
       <div class="row justify-content-center">
           @foreach ($articles as $article )
           <div class="col-12 col-md-8 col-lg-3 my-5 justify-content-center d-flex">
-              <div class="card-wrap ">
-                  <div class="">
-                      <img src="{{Storage::url($article->img)}}" class=" rounded-start card-img" alt="...">
-                  </div>
+              <div class="card-wrap  "style="width:19rem">
+                      <img src="{{Storage::url($article->img)}}"height="220vh" >
+                  
                       <div class="card-body">
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->subtitle}}</p>

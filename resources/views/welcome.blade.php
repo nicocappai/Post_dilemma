@@ -47,7 +47,7 @@
             @foreach ($articles as $article )
             <div class="col-12 col-md-8 col-lg-3 my-5 justify-content-center d-flex">
                 <div class=" card-wrap" style="width:18rem">
-                        <img src="{{Storage::url($article->img)}}" height="220vh" width="280vh">
+                        <img src="{{Storage::url($article->img)}}" height="220vh">
 
                         <div class="card-body">
                           <h5 class="card-title">{{$article->title}}</h5>
