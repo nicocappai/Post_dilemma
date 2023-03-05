@@ -113,7 +113,7 @@
 
     {{-- Google maps --}}
 
-    <div class="container mappa p-3">
+    <div class="container mappa p-2 pb-5">
 
       <iframe class="w-100 h-100 radius" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.8112892082127!2d16.84793065070372!3d41.1168122791882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347e8bcca130e17%3A0x47ce9d5124576e73!2sAulab%20Hackademy!5e0!3m2!1sit!2sit!4v1676249790324!5m2!1sit!2sit"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

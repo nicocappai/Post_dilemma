@@ -8,7 +8,7 @@
     <title>The Aulab Post</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
-      </style>  
+     </style>
 </head>
 <body>
     <x-navbar />
