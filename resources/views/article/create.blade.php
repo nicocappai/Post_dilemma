@@ -1,6 +1,6 @@
 <x-layout>
 
-    <body class="backg">
+<body class="backg">
         
     
     @if ($errors->any())
@@ -19,37 +19,37 @@
                     @csrf
                     <p id="heading">Crea Articolo</p>
                     <div class="field">
-                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        </svg>
+                          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          </svg>
                           <input autocomplete="off" placeholder="Titolo" class="input-field" type="text" name="title">
                           @error('title')<span class="error bg-danger">{{$message}}</span> @enderror
-                        </div>
-                        <div class="field">
+                    </div>
+                    <div class="field">
                             <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             </svg>
-                              <input autocomplete="off" placeholder="Username" class="input-field"  type="text" name="subtitle">
-                              @error('subtitle')<span class="error bg-danger">{{$message}}</span> @enderror
-                            </div>
-                    <div class="field">
-                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    </svg>
-                      <input autocomplete="off" class="input-field bg-img" type="file" name="img">
+                            <input autocomplete="off" placeholder="Username" class="input-field"  type="text" name="subtitle">
+                            @error('subtitle')<span class="error bg-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="field">
-                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    </svg>
-                    <textarea name="body" id="" cols="30" rows="10" class="form-control bg-textarea text-white
-                     bg-dark" placeholder="Inserisci il testo"></textarea>
+                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            </svg>
+                            <input autocomplete="off" class="input-field bg-img" type="file" name="img">
+                    </div>
+                    <div class="field">
+                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            </svg>
+                            <textarea name="body" id="" cols="30" rows="10" class="form-control bg-textarea text-white
+                            bg-dark" placeholder="Inserisci il testo"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label  class="form-label text-white">Categoria:</label>
-                        <select name="category" id="category" class="form-control text-capitalize  bg-categoria bg-dark">
-                            @foreach ($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
-            
-                            @endforeach
-                        </select>
-                        @error('category')<span class="error bg-danger">{{$message}}</span> @enderror
+                            <label  class="form-label text-white">Categoria:</label>
+                            <select name="category" id="category" class="form-control text-capitalize  bg-categoria bg-dark">
+                                @foreach ($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                
+                                @endforeach
+                            </select>
+                            @error('category')<span class="error bg-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="btn">
                     <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserisci Articolo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
@@ -64,6 +64,7 @@
                         </div>
                         <span class="">Home</span>
                     </a>
+                    </div>
                 </form>
             </div>
         </div>

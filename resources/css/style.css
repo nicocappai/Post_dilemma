@@ -517,7 +517,7 @@ body{
 .invisible-scrollbar,
 .mostly-customized-scrollbar {
   display: block;
-  width: 19.4em;
+  width: 17em;
   overflow: auto;
   height: 4em;
 }
@@ -617,6 +617,11 @@ li{
     display: block;
     width: 100%;
   }
+
+  .swiper-pagination-bullet{
+    background-color: #198754;
+  }
+
 /*card-swiper*/
   .card {
     width: 250px;
@@ -662,3 +667,20 @@ li{
    }
 
 
+   .img-show{
+    border-radius: 20px;
+    width: 100vh;
+    height: 300px;
+   }
+
+.z-index-welcome{
+  position: relative;
+  z-index: 5;
+  top: -50px;
+}
+
+.z-index-card{
+  position: relative;
+  z-index: 6;
+  top: -40px;
+}
