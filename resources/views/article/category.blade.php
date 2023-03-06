@@ -1,34 +1,45 @@
 <x-layout>
-<body class="backg">
+    <body class="backg">
 
-    <div class="container-fluid my-4">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <h1 class="font">Categoria {{$category->name}}</h1>
+        <div class="container-fluid my-4">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h1 class="font">Categoria {{$category->name}}</h1>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container my-5">
-        <div class="row justy-content-around">
-            @foreach ($articles as $article )
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="card">
-                       <img src="{{Storage::url($article->img)}}" class="img-fluid rounded-start img-card" alt="...">
+        <div class="container-fluid my-3 font pb-2">
+            <div class="row justify-content-center">
+                @foreach ($articles as $article )
+                <div class="col-12 col-md-8 col-lg-3 my-5 justify-content-center d-flex">
+                    <div class=" card-wrap" style="width:18rem">
+                        <img src="{{Storage::url($article->img)}}" height="" class="img-size">
                         <div class="card-body">
-                          <h5 class="card-title">{{$article->title}}</h5>
-                          <p class="card-text">{{$article->subtitle}}</p>
-                        </div>
-                        <div class="card-footer text-muted d-flex justify-content-between align-items-center">
-                            <p class="card-text">Redatto il {{$article->created_at->format('d/m/Y')}} da <a class="href-color" href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
-                        <a href="{{route('article.show', compact('article'))}}" class="btn card-btn m-0">Leggi</a>
+                            <h5 class="card-title">{{$article->title}}</h5>
+                            <p class="card-text">{{$article->subtitle}}</p>
+                            <div class="card-footer text-center">
+                                <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a class="href-color" href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
+                                <a href="{{route('article.show', compact('article'))}}" class="btn card-btn">Leggi</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
-    </div>
-</body>    
-</x-layout>
+
+        </body>
+
+
+
+    </x-layout>
+
+
+
+
+
+
+
+
+
