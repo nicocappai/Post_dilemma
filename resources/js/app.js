@@ -2,4 +2,4 @@
 import'bootstrap/dist/js/bootstrap';
 
 import './bootstrap';
-import'./script';
+import'./script.js';

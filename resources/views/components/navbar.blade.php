@@ -1,7 +1,7 @@
-<div class="container-fluid font ">
+<div class="container-fluid font" id="nav">
     <div class="row justify-content-center  ">
         <div class="col-12 col-md-8 col-lg-12 ">
-            <nav class="navbar navbar-expand-lg bg_color nav-border ">
+            <nav class="navbar navbar-expand-lg bg_color nav-border">
                 <div class="container-fluid">
                     <p class="navbar-brand text-success m-2">Dilemma.it</p>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

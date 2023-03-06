@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/skins/color-1.css">
+     {{-- swiper CSS --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
     @vite(['resources/js/style-switcher.js'])
+
+
     <title>The Aulab Post</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
-     </style>
+    </style>
 </head>
 <body>
     <x-navbar />
@@ -34,33 +36,34 @@
             <div class="cell d-4"></div>
 
 
-          </div>
+        </div>
     </div>
 
     <div id="pageContent" class="d-none">
 
 
-    <div >
-        {{$slot}}
-    </div>
 
-    <x-footer />
-    <!-- ===== Style Switcher Start ===== -->
-    <div class="style-switcher">
+            {{$slot}}
 
-        <div class="day-night s-icon style-switcher-toggler ">
-            <i class="fas fa-moon"></i>
+
+        <x-footer />
+        <!-- ===== Style Switcher Start ===== -->
+        <div class="style-switcher">
+
+            <div class="day-night s-icon style-switcher-toggler ">
+                <i class="fas fa-moon"></i>
+            </div>
+
         </div>
 
+        <!-- ===== Style Switcher End ===== -->
     </div>
-
-    <!-- ===== Style Switcher End ===== -->
-</div>
 
 
 
 
     <script src="https://kit.fontawesome.com/8234f4d33d.js" crossorigin="anonymous"></script>
-
+    {{-- swiper JS --}}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 </html>

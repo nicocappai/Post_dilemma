@@ -17,6 +17,7 @@ body.dark {
 }
 .day-light{
     color: wheat;
+
 }
 
 
@@ -24,10 +25,9 @@ body.dark {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    z-index: 1;
+    z-index: 3;
     /* position: fixed; */
-
-  }
+}
 
 
   .nav-border{
@@ -43,8 +43,9 @@ body.dark {
   .nav-border{
     border-radius: 10px;
 
-
 }
+
+
 .margin-benvenuto{
   margin-left: -31px;
 }
@@ -63,11 +64,16 @@ body.dark {
 }
 
 .alt{
-    align-items: center;;
+    align-items: center;
 }
 .search{
     border-radius: 54px;
     height: 8vh;
+
+}
+.z-index-form{
+    z-index:999;
+position: relative;
 }
 .btn-search{
     border-radius: 54px;
@@ -85,6 +91,7 @@ body.dark {
 .font{
     font-family: 'Lato', sans-serif;
     font-family: 'Roboto Slab', serif;
+
 }
 
 .font-inserire{
@@ -389,10 +396,16 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0%;
-    height: 100vh;
     position: relative;
-    z-index: -1;
+    height: 100vh;
+
+    z-index: 1;
     top: -140px ;
+}
+.prova{
+    position: relative;
+    z-index: 2;
+    top: -150px;
 }
    .distance{
     top: 130px;
@@ -432,6 +445,12 @@ body{
     }
     .card-wrap:hover{
       transform: scale(1.1);
+    }
+    .img-size{
+        width:100%;
+        height: auto;
+        max-height: 300px;
+object-fit: cover;
     }
   .card-content{
     display: flex;
@@ -578,3 +597,64 @@ li{
 .box-radius{
     border-radius: 54px;
 }
+
+/* swiper2 */
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+/*card-swiper*/
+  .card {
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #F8FBFE;
+    border-radius: 8px;
+    z-index: 1;
+   }
+
+   .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+   }
+
+   .circle {
+    padding: 0 4px;
+   }
+
+   .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+   }
+
+   .red {
+    background-color: #137e4cd2;
+   }
+
+   .yellow {
+    background-color: #137e4cd2;
+   }
+
+   .green {
+    background-color: #137e4cd2;
+   }
+
+
