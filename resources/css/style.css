@@ -450,7 +450,8 @@ body{
         width:100%;
         height: auto;
         max-height: 300px;
-object-fit: cover;
+        object-fit: cover;
+        height: 230px;
     }
   .card-content{
     display: flex;
@@ -655,6 +656,9 @@ li{
 
    .green {
     background-color: #137e4cd2;
+   }
+   .text-size{
+    font-size: 100%;
    }
 
 
