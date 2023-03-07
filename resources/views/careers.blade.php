@@ -18,11 +18,11 @@
                 <h2>Lavora come redattore</h2>
             </div>
             <div class="col-12 col-md-6">
-                <form method="" action="">
+                <form method="POST" class="form" action="{{route('careers.submit')}}">
                     @csrf
                     <div class="mb-3">
                         <label for="role" class="form-control">per quale ruolo ti stai candidanto?</label>
-                        <select name="role" class="form-control">
+                        <select name="role" id="role" class="form-control">
                             <option value="">Scegli qui</option>
                             <option value="admin">Amministratore</option>
                             <option value="revisor">Revisore</option>
@@ -30,12 +30,12 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                      <label  class="form-label">Email</label>
-                      <input type="text" name="email" class="form-control"  >
+                      <label for="email" class="form-label">Email</label>
+                      <input type="text" name="email" class="form-control" id="email" value="{{old('email') ?? Auth::user()->email}}" >
                     </div>
                     <div class="mb-3">
-                      <label  class="form-label ">Parlaci di te</label>
-                     <textarea name="message" class="form-control" id="" cols="30" rows="10"></textarea>
+                      <label for="message" class="form-label ">Parlaci di te</label>
+                     <textarea name="message" class="form-control" id="message" cols="30" rows="10">{{old('message')}}</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Invia la candidatura</button>
                   </form>

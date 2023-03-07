@@ -13,6 +13,8 @@
                             <li class="nav-item">
                                 <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
                             </li>
+                            <li><a class="nav-link text-white" href="{{route('careers')}}">Lavora con noi</a></li>
+                                 
                             @guest
 
                             @else
@@ -54,6 +56,13 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="{{route('article.create')}}">Crea Articolo</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        @if(Auth::user()->is_admin)
+                                            <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+                                        @endif
+                                        @if(Auth::user()->is_revisor)
+                                            <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard del Revisore</a></li>
+                                        @endif
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{{route('logout')}}"
                                             onclick="event.preventDefault();

@@ -10,6 +10,10 @@
                     <p class="card-text pt-3 text-size">{{$article->body}}</p>
                     <p class="card-text text-size">Redatto da {{$article->user->name}} il {{$article->created_at->format('d/m/Y')}}</p>
                     <div class="d-flex justify-content-center">
+                        @if(Auth::user() && Auth::user()->is_revisor)
+                            <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn card-btn text-white">Accetta articolo</a>
+                            <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn card-btn text-white">Rifiuta articolo</a>
+                        @endif
                     <a href="{{route('article.index')}}" class="btn card-btn text-white my-4">Torna indietro</a>
                     </div>
                 </div>

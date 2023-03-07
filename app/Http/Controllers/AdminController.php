@@ -20,7 +20,7 @@ class AdminController extends Controller
             'is_admin' => true,
         ]);
 
-        return redirect(route('admmin.dashboard'))->with('message' , 'Hai corretamente reso amministratore l\'utente scelto');
+        return redirect(route('admin.dashboard'))->with('message' , 'Hai corretamente reso amministratore l\'utente scelto');
     }
 
     public function setRevisor (User $user){
@@ -28,7 +28,7 @@ class AdminController extends Controller
             'is_revisor' => true,
         ]);
 
-        return redirect(route('admmin.dashboard'))->with('message' , 'Hai corretamente reso revisore l\'utente scelto');
+        return redirect(route('admin.dashboard'))->with('message' , 'Hai corretamente reso Revisore l\'utente scelto');
     }
 
     public function setWriter (User $user){
@@ -36,7 +36,7 @@ class AdminController extends Controller
             'is_writer' => true,
         ]);
 
-        return redirect(route('admmin.dashboard'))->with('message' , 'Hai corretamente reso Redattore l\'utente scelto');
+        return redirect(route('admin.dashboard'))->with('message' , 'Hai corretamente reso Redattore l\'utente scelto');
     }
 
  

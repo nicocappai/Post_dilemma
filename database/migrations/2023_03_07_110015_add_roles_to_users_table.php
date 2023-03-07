@@ -33,10 +33,10 @@ return new class extends Migration
      * Reverse the migrations.
      */
     public function down(): void{
-        User::where('email','admin@theaulabpost.it')->delete();
+        User::where('email' , 'admin@theaulabpost.it')->delete();
       
-        Schema::table('users',function (Blueprint $table){
-            $table->dropColumn(['is_admin','is_revisor','is_writer']);
+        Schema::table('users', function (Blueprint $table){
+            $table->dropColumn(['is_admin' , 'is_revisor' , 'is_writer']);
         });
     }
 };

@@ -12,8 +12,7 @@ class PublicController extends Controller
 {
 
     public function homepage () {
-
-        $articles = Article::orderBy('created_at', 'desc')->take(4)->get();
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
         return view('welcome' , compact('articles'));
     }
 
@@ -30,7 +29,7 @@ class PublicController extends Controller
        $request->validate([
         'role'=>'required',
         'email'=>'required|email',
-        'message'=>'required'
+        'message'=>'required',
        ]);
        $user = Auth::user();
        $role = $request->role;
@@ -42,15 +41,15 @@ class PublicController extends Controller
         case'admin':
             $user->is_admin = NULL;
             break;
-            case'revisor':
-                $user->is_revisor = NULL;
-                break;
-                case'writer':
-                    $user->is_writer = NULL;
-                    break;
+        case'revisor':
+            $user->is_revisor = NULL;
+            break;
+        case'writer':
+            $user->is_writer = NULL;
+            break;
        }
             $user->update();
-            return redirect(route('homepage'))->with('message','grazie per averci contattato');
+            return redirect(route('homepage'))->with('message' , 'Grazie per averci contattato');
     }
 
 
