@@ -6,7 +6,18 @@
     </div>
     @endif
 
-    <div class="container-fluid bg-home">
+    <div class="container">
+        <div class="row">
+            <div class="col-12  ">
+                <video width="100%" autoplay loop muted plays-inline class="back-video fixed-top">
+                    <source src="/images/video.mp4" type="video/mp4">
+                </video>
+        </div>
+        </div>
+    </div>
+   
+   
+    <div class="container-fluid">
         <div class="row justify-content-center align-items-center my-5">
             <div class="col-12 col-md-8 col-lg-6 pt-5 my-5">
                 <h1 class="text-center text-white my-5 pt-5 font-inserire">Inserire un articolo su <br> Dilemma.it é
@@ -35,17 +46,24 @@
         </div>
     </div>
 
+   
 
 
-    <div class="container-fluid">
+
+    {{-- <div class="container-fluid sfondo-sezioni mt-5 pt-5">
         <div class="row justify-content-center">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center sfondo-sezioni">
                 <h1 class="font z-index-welcome">Ultime pubblicazioni</h1>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="container-fluid my-3 font pb-2 z-index-card">
+    <div class="container-fluid  font z-index-card sfondo-sezioni">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center sfondo-sezioni">
+                <h1 class="font z-index-welcome">Ultime pubblicazioni</h1>
+            </div>
+        </div>
         <div class="row justify-content-center">
             @foreach ($articles as $article )
             <div class="col-12 col-md-8 col-lg-3 my-5 justify-content-center d-flex">
@@ -70,7 +88,7 @@
     </div>
 
     <!-- Sezione contatori -->
-    <div class="container-fluid bg-welcome sez_contatori pt-3 pb-5 text-white">
+    <div class="container-fluid bg-welcome sez_contatori pt-3 pb-5 text-white z-index-card">
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="d-flex justify-content-center align-items-center"><p class="number mb-0">+</p><p id="firstNumber" class="number mb-0">0</p><p class="number mb-0">%</p></div>
@@ -97,7 +115,7 @@
         </div>
     </div>
     {{-- swiper2 --}}
-    <div class="container-fluid my-5">
+    <div class="container-fluid sfondo-bianco p-5 z-index-card prova">
         <div class="row">
             <div class="col-12">
                 <div class="swiper mySwiper">

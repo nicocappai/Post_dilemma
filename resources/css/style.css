@@ -21,6 +21,8 @@ body.dark {
 }
 
 
+
+
 .navbar{
     margin-top: 20px;
     margin-left: 20px;
@@ -104,7 +106,8 @@ position: relative;
 
 /* colore sfondo */
 body{
-    background-color: rgba(255, 255, 255, 0.61);
+    /* background-color: rgba(255, 255, 255, 0.61); */
+    background-color: #0E0C0C;
 }
 /* .bg-1{
   background-color: rgba(184, 25, 25, 0.61);
@@ -400,8 +403,8 @@ body{
    }
 
    /* background home */
-   .bg-home {
-    background-image: linear-gradient(0deg, rgba(3, 2, 27, 0.329) 40%, rgb(255, 255, 255, 61) 100%), url(/public/images/change-gc22ee721a_1920.jpg);
+   /* .bg-home {
+    background-image: linear-gradient(0deg, rgba(3, 2, 27, 0.329) 40%, rgb(255, 255, 255, 61) 100%), url(/public/images/pexels-anastasia-shuraeva-7538905.mp4); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0%;
@@ -410,12 +413,54 @@ body{
 
     z-index: 1;
     top: -140px ;
+} */
+
+
+.back-video {
+  background-attachment: fixed;
+  background-size: cover;
+  top: -200px;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
 }
-.prova{
+
+@media (min-aspect-ratio:16/9) {
+  .back-video{
+    
+    width: 100%;
+    height: auto;
+
+  }
+}
+
+@media (max-aspect-ratio:16/9) {
+  .back-video{
+    width: auto;
+    height: 100vh;
+  }
+}
+  
+
+.sfondo-sezioni{
+ margin-top: 80px;
+background-color: white;
+
+}
+
+.sfondo-bianco{
+
+ background-color: white;
+ }
+
+
+
+/* .prova{
     position: relative;
     z-index: 2;
     top: -150px;
-}
+} */
    .distance{
     top: 130px;
     position: relative;
@@ -702,8 +747,9 @@ li{
 .z-index-card{
   position: relative;
   z-index: 6;
-  top: -40px;
+   top: -40px;
 }
+
 
 .position-message{
   position: relative;
