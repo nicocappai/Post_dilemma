@@ -9,7 +9,7 @@
     <div class="container-fluid bg-home">
         <div class="row justify-content-center align-items-center my-5">
             <div class="col-12 col-md-8 col-lg-6 pt-5 my-5">
-                <h1 class="text-center text-white my-5 pt-5 font-inserire">Inserire un annuncio su <br> Dilemma.it é
+                <h1 class="text-center text-white my-5 pt-5 font-inserire">Inserire un articolo su <br> Dilemma.it é
                     <div class="container pt-3">
                         <div class="row">
                             <div class="col-12 col-md-4">

@@ -14,28 +14,24 @@
                                 <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
                             </li>
                             <li><a class="nav-link text-white" href="{{route('careers')}}">Lavora con noi</a></li>
-                                 
-                            @guest
-
-                            @else
+            
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{route('article.index')}}">Tutti gli articoli</a>
                             </li>
-                                <div class="nav-item dropend list-unstyled ">
-                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Categorie
-                                    </a>
-                                    <ul class="dropdown-menu padding-dropdown">
-                                        @foreach ($categories as $category)
+                                
+                            <div class="nav-item dropend list-unstyled ">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorie
+                                </a>
+                                <ul class="dropdown-menu padding-dropdown">
+                                    @foreach ($categories as $category)
                                         <li><a class="dropdown-item" href="{{route('article.category' , $category)}}">{{$category->name}}</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                @endguest
-
-                            </ul>
-                            @guest
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </ul>
+                        @guest
                             <ul>
                                 <li class="nav-item dropdown maargin">
                                     <a class="nav-link dropdown-toggle text-white margin-benvenuto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,7 +43,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                            @else
+                        @else
                             <ul>
                                 <li class="nav-item dropdown align-content-centerd maargin">
                                     <a class="nav-link dropdown-toggle text-white margin-benvenuto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,34 +51,34 @@
                                         Benvenuto {{Auth::user()->name}}
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="{{route('article.create')}}">Crea Articolo</a></li>
-                                        <li><hr class="dropdown-divider"></li>
+                                        {{-- <li><a class="dropdown-item" href="{{route('article.create')}}">Crea Articolo</a></li>
+                                        <li><hr class="dropdown-divider"></li> --}}
                                         @if(Auth::user()->is_admin)
                                             <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
                                         @endif
                                         @if(Auth::user()->is_revisor)
                                             <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard del Revisore</a></li>
                                         @endif
+                                        @if(Auth::user()->is_writer)
+                                            <li><a class="dropdown-item" href="{{route('article.create')}}">Dashboard del Writer</a></li>
+                                        @endif
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{{route('logout')}}"
                                             onclick="event.preventDefault();
                                             document.getElementById('form-logout').
-                                            submit();">Logout</a></li>
-                                            <form action="{{route('logout')}}" method="POST" class="d-none" id="form-logout">
-                                                @csrf
-                                            </form>
+                                            submit();">Logout</a>
+                                        </li>
+                                        <form action="{{route('logout')}}" method="POST" class="d-none" id="form-logout">
+                                        @csrf
+                                        </form>
                                     </ul>
                                 </li>
                             </ul>
-                            @endguest
-                        </div>
+                        @endguest
                     </div>
-                </nav>
-            </div>
-
-
+                </div>
+            </nav>
         </div>
-
     </div>
 </div>
 
