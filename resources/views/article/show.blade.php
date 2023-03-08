@@ -3,7 +3,7 @@
         <div class="container-fluid my-5">
             <div class="row justify-content-center">
                 <div class="col-4 ms-2">
-                    <img src="{{Storage::url($article->img)}}" class="img-fluid img-show" alt="...">
+                    <img src="{{Storage::url($article->img)}}" class="img-fluid img-show-articolo " alt="...">
                 </div>
                 <div class="col-6 flex-column d-flex align-items-center justify-content-center">
                     <h2 class="my-4 text-center">{{$article->title}}</h2>
