@@ -6,20 +6,15 @@
     </div>
     @endif
 
-    <div class="container">
-        <div class="row">
+
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
             <div class="col-12  ">
-                <video width="100%" autoplay loop muted plays-inline class="back-video fixed-top">
+                <video width="100%" autoplay loop muted plays-inline class="back-video ">
                     <source src="/images/video.mp4" type="video/mp4">
                 </video>
             </div>
-        </div>
-    </div>
-   
-   
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center my-5">
-            <div class="col-12 col-md-8 col-lg-6 pt-5 my-5">
+            <div class="col-12 col-md-8 col-lg-6 pt-5 mt-5">
                 <h1 class="text-center text-white my-5 pt-5 font-inserire">Inserire un articolo su <br> Dilemma.it é
                     <div class="container pt-3">
                         <div class="row">
@@ -46,7 +41,7 @@
         </div>
     </div>
 
-   
+
 
 
 
@@ -58,11 +53,12 @@
         </div>
     </div> --}}
 
-    <div class="container-fluid  font z-index-card sfondo-sezioni">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center sfondo-sezioni">
-                <h1 class="font z-index-welcome">Ultime pubblicazioni</h1>
-            </div>
+    <div class="container-fluid  font my-5">
+        <div class="row justify-content-center z-index-welcome">
+
+        </div>
+        <div class="col-12 text-center  ">
+            <h1 class="font ">Ultime pubblicazioni</h1>
         </div>
         <div class="row justify-content-center">
             @foreach ($articles as $article )
@@ -73,7 +69,7 @@
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->subtitle}}</p>
                         <div class=" my-3">
-                            <p class="card-text">{{substr($article->body, 0, 100)}}...</p>
+                            <p class="card-text">{{substr($article->body, 0, 30)}}...</p>
                         </div>
                         <p class="card-text my-2">Categoria: <a class="href-color" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
                         <div class="card-footer text-center">
@@ -88,7 +84,7 @@
     </div>
 
     <!-- Sezione contatori -->
-    <div class="container-fluid bg-welcome sez_contatori pt-3 pb-5 text-white z-index-card">
+    <div class="container-fluid bg-welcome sez_contatori pt-5 pb-5 mt-2 text-white  ">
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="d-flex justify-content-center align-items-center"><p class="number mb-0">+</p><p id="firstNumber" class="number mb-0">0</p><p class="number mb-0">%</p></div>
@@ -115,7 +111,7 @@
         </div>
     </div>
     {{-- swiper2 --}}
-    <div class="container-fluid sfondo-bianco p-5 z-index-card prova">
+    <div class="container-fluid  p-5 z-index-card ">
         <div class="row">
             <div class="col-12">
                 <div class="swiper mySwiper">

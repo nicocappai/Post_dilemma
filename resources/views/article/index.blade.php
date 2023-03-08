@@ -18,7 +18,7 @@
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->subtitle}}</p>
                         <div class="mostly-customized-scrollbar my-3">
-                          <p class="card-text  ">{{$article->body}}</p>
+                          <p class="card-text  ">{{substr($article->body, 0, 30)}}...</p>
                       </div>
                         <p class="card-text">Categoria: <a class="href-color" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
                       <div class="card-footer text-center">
