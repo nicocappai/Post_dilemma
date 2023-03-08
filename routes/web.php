@@ -40,6 +40,10 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-admin' , [AdminController::class , 'setAdmin'])->name ('admin.setAdmin');
     Route::get('/admin/{user}/set-revisor' , [AdminController::class , 'setRevisor'])->name ('admin.setRevisor');
     Route::get('/admin/{user}/set-writer' , [AdminController::class , 'setWriter'])->name ('admin.setWriter');
+
+    Route::get('/admin/{user}/set-admin-r' , [AdminController::class , 'setAdminR'])->name ('admin.setAdmin-r');
+    Route::get('/admin/{user}/set-revisor-r' , [AdminController::class , 'setRevisorR'])->name ('admin.setRevisor-r');
+    Route::get('/admin/{user}/set-writer-r' , [AdminController::class , 'setWriterR'])->name ('admin.setWriter-r');
 });
 
 Route::middleware('revisor')->group(function(){

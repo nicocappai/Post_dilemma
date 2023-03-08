@@ -12,6 +12,7 @@ class AdminController extends Controller
         $revisorRequests = User::where('is_revisor' , NULL)->get();
         $writerRequests = User::where('is_writer', NULL)->get();
 
+
         return view('admin.dashboard' , compact('adminRequests', 'revisorRequests' , 'writerRequests'));
     }
 
@@ -39,5 +40,28 @@ class AdminController extends Controller
         return redirect(route('admin.dashboard'))->with('message' , 'Hai corretamente reso Redattore l\'utente scelto');
     }
 
- 
+    public function setAdminR (User $user){
+        $user->update([
+            'is_admin' => false,
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message' , 'L\'utente scelto non può diventare amministratore');
+    }
+
+    public function setRevisorR (User $user){
+        $user->update([
+            'is_revisor' => false,
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message' , 'L\'utente scelto non può diventare revisore');
+    }
+
+    public function setWriterR (User $user){
+        $user->update([
+            'is_writer' => false,
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message' , 'L\'utente scelto non può diventare redattore');
+    }
+
 }

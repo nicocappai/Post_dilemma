@@ -17,6 +17,7 @@
 </head>
 <body>
     <x-navbar />
+
     {{-- spinner fase di caricamento --}}
     <div id="loading" class="d-flex justify-content-center align-content-center my-mio">
         <div class="loader">
@@ -47,16 +48,7 @@
 
 
         <x-footer />
-        <!-- ===== Style Switcher Start ===== -->
-        <div class="style-switcher">
 
-            <div class="day-night s-icon style-switcher-toggler ">
-                <i class="fas fa-moon"></i>
-            </div>
-
-        </div>
-
-        <!-- ===== Style Switcher End ===== -->
     </div>
 
 

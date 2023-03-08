@@ -14,21 +14,20 @@
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
             <td>
-        
-
-            @switch($role)
-                @case('amministratore')
-                    <a href="{{route('admin.setAdmin' , compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
-                    @break
-                @case('revisore')
-                    <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
-                    @break
-                @case('redattore')
-                    <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
-                    @break      
-            @endswitch
-            
-    
+                @switch($role)
+                 @case('amministratore')
+                  <a href="{{route('admin.setAdmin' , compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                  <a href="{{route('admin.setAdmin-r', compact('user'))}}" class="btn btn-danger text-white">Rimuovi {{$role}}</a>
+                @break
+                 @case('revisore')
+                  <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                  <a href="{{route('admin.setRevisor-r', compact('user'))}}" class="btn btn-danger text-white">Rimuovi {{$role}}</a>
+                @break
+                 @case('redattore')
+                  <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                  <a href="{{route('admin.setWriter-r', compact('user'))}}" class="btn btn-danger text-white">Rimuovi {{$role}}</a>
+                @break
+                @endswitch
             </td>
         </tr>
         @endforeach
