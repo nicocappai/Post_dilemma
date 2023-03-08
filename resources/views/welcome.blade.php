@@ -12,7 +12,7 @@
                 <video width="100%" autoplay loop muted plays-inline class="back-video fixed-top">
                     <source src="/images/video.mp4" type="video/mp4">
                 </video>
-        </div>
+            </div>
         </div>
     </div>
    

@@ -419,11 +419,11 @@ body{
 .back-video {
   background-attachment: fixed;
   background-size: cover;
-  top: -200px;
+  top: -10%;
   right: 0;
   bottom: 0;
   z-index: -1;
-
+  background-repeat: no-repeat;
 }
 
 @media (min-aspect-ratio:16/9) {
@@ -747,7 +747,7 @@ li{
 .z-index-card{
   position: relative;
   z-index: 6;
-   top: -40px;
+   /* top: -20px; */
 }
 
 
