@@ -684,3 +684,12 @@ li{
   z-index: 6;
   top: -40px;
 }
+
+.position-message{
+  position: relative;
+  z-index: 10;
+  background-color: #19875452;
+  margin-left: 200px;
+  margin-right: 200px;
+  border-radius: 20px;
+}

@@ -1,7 +1,7 @@
 
 <x-layout>
     @if (session('message'))
-    <div class="alert alert-success text-center">
+    <div class="alert text-center position-message mt-3">
         <p class="m-0">{{session('message')}}</p>
     </div>
     @endif
