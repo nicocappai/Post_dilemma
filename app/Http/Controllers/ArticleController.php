@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ArticleRequest;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -35,7 +37,7 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
         $request->validate([
         'title' => 'required|min:3',
@@ -48,15 +50,11 @@ class ArticleController extends Controller
           'title'=>$request->title,
           'subtitle'=>$request->subtitle,
           'body'=>$request->body,
-          'img'=> $request->file('img')->store('public/img'),
+          'img'=> $request->has('img') ? $request->file('img')->store('public') : 'img/default.png' ,
           'category_id'=>$request->category,
           'user_id'=> Auth::user()->id,
 
         ]);
-
-
-
-
 
         return redirect(route('homepage'))->with('message','Articolo creato');
     }

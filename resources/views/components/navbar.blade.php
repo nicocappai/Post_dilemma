@@ -67,7 +67,7 @@
                                     <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard del Revisore</a></li>
                                     @endif
                                     @if(Auth::user()->is_writer)
-                                    <li><a class="dropdown-item" href="{{route('article.create')}}">Dashboard del Writer</a></li>
+                                    <li><a class="dropdown-item" href="{{route('article.create')}}">Crea Articolo</a></li>
                                     @endif
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="{{route('logout')}}"
@@ -84,10 +84,11 @@
 
                         @endguest
                         <!-- ===== Style Switcher Start ===== -->
-
+                        <a href="#" class="me-1">
                         <div class=" day-night s-icon style-switcher-toggler ">
                             <i class="fas fa-moon text-white fs-4 mx-1"></i>
                         </div>
+                        </a>
                         <!-- ===== Style Switcher End ===== -->
                     </div>
                 </div>

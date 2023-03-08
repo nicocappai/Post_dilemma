@@ -1,5 +1,5 @@
 <x-layout>
-<body>
+<body class="back-show">
     <div class="container-fluid my-3">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
@@ -11,7 +11,7 @@
     <div class="container-fluid p-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-                <h2>Lavora come aministaratore</h2>
+                <h2>Lavora come amministratore</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus obcaecati sed adipisci molestiae alias odio? Quis, ea! Non facere, animi placeat accusantium sunt nemo, odit velit explicabo voluptatum est ad?</p>
                 <h2>Lavora come revisore</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores voluptas rem ea, laudantium provident, possimus nisi aut quis ut incidunt ipsa sit soluta commodi perferendis aspernatur asperiores mollitia itaque consequatur!</p>
@@ -39,7 +39,7 @@
                       <label for="message" class="form-label text-white">Parlaci di te</label>
                      <textarea name="message" class="form-control" id="message" cols="30" rows="10">{{old('message')}}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Invia la candidatura</button>
+                    <button type="submit" class="btn btn-careers">Invia la candidatura</button>
                   </form>
             </div>
         </div>

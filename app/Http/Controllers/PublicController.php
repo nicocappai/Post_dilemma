@@ -49,7 +49,7 @@ class PublicController extends Controller
             break;
        }
             $user->update();
-            return redirect(route('homepage'))->with('message' , 'Grazie per averci contattato');
+            return redirect(route('homepage'))->with('message' , 'La tua candidatura é stata inviata con successo');
     }
 
 

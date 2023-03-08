@@ -1,10 +1,12 @@
 <x-layout>
-
-<div class="container-fluid p-5 bg-info text-center text-white">
+<body class="back-show">
+<div class="container-fluid p-5  text-center text-white">
     <div class="row justify-content-center">
-        <h1 class="display-1">
-            Bentornato, Amministratore
+        <div class="col-12">
+        <h1 class="display-1 text-dashboard">
+            Sezione Amministratore
         </h1>
+        </div>
     </div>
 </div>
 
@@ -40,5 +42,5 @@
         </div>
     </div>
 </div>
-
+</body>
 </x-layout>
