@@ -1,5 +1,5 @@
 <x-layout>
-    
+
     <body class="backg">
         <div class="container-fluid my-5">
             <div class="row justify-content-center">
@@ -21,7 +21,7 @@
                             <input autocomplete="off" placeholder="Username" class="input-field"  type="text" name="subtitle" value="{{old('subtitle')}}">
                         </div>
                         @error('subtitle')
-                        <div class="error text-white text-center">{{$message}}</div> 
+                        <div class="error text-white text-center">{{$message}}</div>
                         @enderror
                         <div class="field">
                             <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -32,7 +32,7 @@
                             <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             </svg>
                             <textarea name="body" id="" cols="30" rows="30" class="form-control bg-textarea text-white
-                            bg-dark" placeholder="Inserisci il testo" value="{{old('body')}}"></textarea>      
+                            bg-dark" placeholder="Inserisci il testo" value="{{old('body')}}"></textarea>
                         </div>
                         @error('body')
                         <div class="error text-white text-center">{{$message}}</div>
@@ -42,10 +42,18 @@
                             <select name="category" id="category" class="form-control text-capitalize  bg-categoria bg-dark">
                                 @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
-                                
+
                                 @endforeach
                             </select>
+                        </div >
+                        <div class="mb-3">
+                          <label for="tags" class="form-label">Tags:</label>
+                          <input name="tags" id="tags" class="form-control" value="{{old('tags')}}">
+                          <span class="small fst-italic">Dividi ogni tag con una virgola</span>
                         </div>
+                        @error('tags')
+                        <div class="error text-white text-center">{{$message}}</div>
+                        @enderror
                         <div class="row btn mb-2">
                             <div class="col-12 col-md-8 col-lg-6 mt-2">
                                 <button class="button1">Inserisci Articolo</button>

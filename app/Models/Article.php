@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
-    use HasFactory,Searchable;
-    
+    use HasFactory , Searchable;
+
     public function toSearchableArray()
     {
         return [
@@ -18,7 +18,12 @@ class Article extends Model
             'title'=> $this->title,
             'body'=> $this->body,
             'category'=> $this->category,
+
         ];
+    }
+
+    public function tags(){
+        return $this->belongsToMany(Tag::class);
     }
 
 

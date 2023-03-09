@@ -44,6 +44,11 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-admin-r' , [AdminController::class , 'setAdminR'])->name ('admin.setAdmin-r');
     Route::get('/admin/{user}/set-revisor-r' , [AdminController::class , 'setRevisorR'])->name ('admin.setRevisor-r');
     Route::get('/admin/{user}/set-writer-r' , [AdminController::class , 'setWriterR'])->name ('admin.setWriter-r');
+
+    Route::put('/admin/edit/{tag}/tag', [AdminController::class, 'editTag'])->name('admin.editTag');
+    Route::delete('/admin/delete/{tag}/tag', [AdminController::class, 'deleteTag'])->name('admin.deleteTag');
+    Route::put('/admin/edit/{category}/category', [AdminController::class, 'editCategory'])->name('admin.editCategory');
+    Route::delete('/admin/delete/{category}/category', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory');
 });
 
 Route::middleware('revisor')->group(function(){

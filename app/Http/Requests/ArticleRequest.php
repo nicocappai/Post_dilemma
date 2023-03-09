@@ -25,6 +25,7 @@ class ArticleRequest extends FormRequest
             'title' => 'required|min:4|max:20',
             'subtitle' => 'required|min:4|max:20',
             'body' => 'required|min:10|max:20000',
+            'tags' => 'required|min:3|max:20',
         ];
     }
 
@@ -34,6 +35,7 @@ class ArticleRequest extends FormRequest
             'title.required' => 'Il titolo é richiesto',
             'subtitle.required' => 'Il sottotitolo é richiesto',
             'body.required' => 'Il testo é richiesto',
+            'tags.required' => 'I tag sono richiesti',
         ];
     }
 }

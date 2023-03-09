@@ -15,6 +15,7 @@
                       <img src="{{Storage::url($article->img)}}"height="" class="img-size" >
 
                       <div class="card-body">
+
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->subtitle}}</p>
                         <div class=" my-3">
@@ -22,10 +23,18 @@
                       </div>
                         <p class="card-text">Categoria: <a class="href-color" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
                       <div class="card-footer text-center">
+                        <p class="small fst-italic text-capitalize">
+                            @foreach ($article->tags as $tag )
+                            #{{$tag->name}}
+
+                            @endforeach
+                        </p>
                         <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a class="href-color" href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
                           <a href="{{route('article.show', compact('article'))}}" class="btn card-btn">Leggi</a>
                       </div>
+
                       </div>
+
                 </div>
           </div>
           @endforeach
