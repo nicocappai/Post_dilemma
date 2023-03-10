@@ -51,7 +51,7 @@
                         <div class="field mb-0 pb-0">
                             <svg class="input-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             </svg>
-                            <input autocomplete="off" placeholder="Inserisci i tags" class="input-field" type="text" name="tags" value="{{old('title')}}">
+                            <input autocomplete="off" placeholder="Inserisci i tags" class="input-field mb-2" type="text" name="tags" value="{{old('title')}}">
                         </div>
                         <div class="mt-0">
                             <span class="small fst-italic text-white ms-3 mt-0 pt-0">Dividi ogni tag con una virgola</span>

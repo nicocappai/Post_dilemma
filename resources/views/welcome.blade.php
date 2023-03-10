@@ -69,7 +69,7 @@
                             @if ($article->category)
                             <p class="card-text my-2">Categoria: <a class="href-color fst-italic" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
                             @else
-                            <p class="small text-muted fst-italic text-capitalize">
+                            <p class="small text-muted fst-italic text-capitalize justify-content-center d-flex">
                                 Non Categorizzato
                             </p>
                             @endif

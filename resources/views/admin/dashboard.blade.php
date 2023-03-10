@@ -63,6 +63,13 @@
                        Le Categorie della piattaforma
                     </h1>
                     <x-metainfo-table :metaInfos="$categories" metaType="categorie"/>
+                    <form method="POST" action="{{route('admin.storeCategory')}}"  class="d-flex">
+                        @csrf
+                        <input type="text" name="name" class="form-control m-2" placeholder="Inserisci una nuova categoria">
+                        <button type="submit" class="btn btn bg-success text-white">
+                            Aggiungi
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
