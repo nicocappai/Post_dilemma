@@ -419,14 +419,16 @@ body{
 .back-video {
   position: absolute;
   background-size: cover;
-
   right: 0;
   bottom: 0;
   z-index: -1;
   background-repeat: no-repeat;
 }
+.altezza-video{
+  height: 85vh;
+}
 
-@media (min-aspect-ratio:16/9) {
+/* @media (min-aspect-ratio:16/9) {
   .back-video{
 
     width: 100%;
@@ -440,7 +442,7 @@ body{
     width: auto;
     height: 100vh;
   }
-}
+} */
 
 
 .sfondo-sezioni{
@@ -798,7 +800,7 @@ li{
 .z-index-welcome{
   position: relative;
   z-index: 5;
-margin-bottom: 350px;
+
 
 }
 @media screen and (max-width: 500px) {
@@ -854,5 +856,5 @@ margin-bottom: 350px;
   --bs-table-border-color: #4d6963;
 }
 .spazzio{
-  width: 65vh;
+  width: 506px;
 }

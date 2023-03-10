@@ -42,8 +42,8 @@
                                 </div>
 
                         </ul>
-
                         @guest
+
                         <ul>
                             <li class="nav-item dropdown maargin">
                                 <a class="nav-link dropdown-toggle text-white margin-benvenuto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
