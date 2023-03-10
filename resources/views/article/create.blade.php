@@ -1,5 +1,4 @@
 <x-layout>
-
     <body class="backg">
         <div class="container-fluid my-5">
             <div class="row justify-content-center">
@@ -42,11 +41,11 @@
                             <select name="category" id="category" class="form-control text-capitalize  bg-categoria bg-dark">
                                 @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
-
+                                
                                 @endforeach
                             </select>
                         </div >
-
+                        
                         <label for="tags" class="form-label text-white mb-0 pb-0">Tags:</label>
                         <div class="field mb-0 pb-0">
                             <svg class="input-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -56,7 +55,7 @@
                         <div class="mt-0">
                             <span class="small fst-italic text-white ms-3 mt-0 pt-0">Dividi ogni tag con una virgola</span>
                         </div>
-
+                        
                         @error('tags')
                         <div class="error text-white text-center">{{$message}}</div>
                         @enderror

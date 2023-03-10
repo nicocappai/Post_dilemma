@@ -10,39 +10,39 @@
     <div class="container-fluid altezza-video">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 back-video ">
-                <video width="100%"  autoplay loop muted plays-inline class=" ">
+                <video width="100%" autoplay loop muted plays-inline class=" ">
                     <source src="/images/video.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="col-12 col-md-8 col-lg-6 pt-5 mt-5">
-                    <div class="text-center text-white my-5 pt-5 font-inserire">
-                        <h1 class=" black-media-query">
-                            Inserire un articolo su <br> Dilemma.it é
-                        </h1>
-                        <div class="container pt-3">
-                            <div class="row">
-                                <div class="col-4 col-md-4 black-media-query">
-                                    <i class="fa-regular fa-face-laugh-beam "></i>
-                                    <h3>Facile</h3>
-                                </div>
-                                <div class="col-4 col-md-4 black-media-query">
-                                    <i class="fa-solid fa-gauge-high "></i>
-                                    <h3 >Veloce</h3>
-                                </div>
-                                <div class="col-4 col-md-4 black-media-query">
-                                    <i class="fa-sharp fa-solid fa-lock "></i>
-                                    <h3 >Sicuro</h3>
-                                </div>
-                            </div>
+            <div class="col-12 col-md-8 col-lg-6 pt-5 mt-5 div-video">
+                <div class="text-center text-white my-5 pt-5 font-inserire">
+                    <h1 class=" black-media-query">
+                        Inserire un articolo su <br> Dilemma.it é
+                    </h1>
+                <div class="container pt-3">
+                    <div class="row">
+                        <div class="col-4 col-md-4 black-media-query">
+                            <i class="fa-regular fa-face-laugh-beam "></i>
+                            <h3>Facile</h3>
+                        </div>
+                        <div class="col-4 col-md-4 black-media-query">
+                            <i class="fa-solid fa-gauge-high "></i>
+                            <h3 >Veloce</h3>
+                        </div>
+                        <div class="col-4 col-md-4 black-media-query">
+                            <i class="fa-sharp fa-solid fa-lock "></i>
+                            <h3 >Sicuro</h3>
                         </div>
                     </div>
-                    <form class="d-flex" method="GET" role="search" action="{{route('article.search')}}">
-                        <input class="form-control me-2 search" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
-                        <button class="btn btn-success btn-search" type="submit">Cerca</button>
-                    </form>
                 </div>
+                </div>
+                <form class="d-flex" method="GET" role="search" action="{{route('article.search')}}">
+                    <input class="form-control me-2 search" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
+                    <button class="btn btn-success btn-search" type="submit">Cerca</button>
+                </form>
             </div>
         </div>
+    </div>
 
 
         <div class="container-fluid  font my-5">

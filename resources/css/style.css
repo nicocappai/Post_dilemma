@@ -442,6 +442,7 @@ top: 0;
     height: auto;
 
 }
+
 .black-media-query{
     color: black;
 }
@@ -450,18 +451,11 @@ top: 0;
   }
 }
 
-
-
-
-
-
 .sfondo-sezioni{
  margin-top: 80px;
 
 
 }
-
-
 
 /* .prova{
     position: relative;
@@ -865,6 +859,7 @@ li{
 .table{
   --bs-table-border-color: #4d6963;
 }
-.spazzio{
-  width: 506px;
+
+.spazio{
+  width: 22%;
 }

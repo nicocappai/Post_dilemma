@@ -18,29 +18,25 @@
                                 <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
                             </li>
                         </ul> --}}
-                        <div class="spazzio">
+                        {{-- <div class="spazio">
 
-                        </div>
-                            <ul class="navbar-nav   me-auto">
-                                <li><a class="nav-link text-white" href="{{route('careers')}}">Lavora con noi</a></li>
-
-                                <li class="nav-item">
+                        </div> --}}
+                        <ul class="navbar-nav me-auto">
+                            <li><a class="nav-link text-white" href="{{route('careers')}}">Lavora con noi</a></li>
+                             <li class="nav-item">
                                     <a class="nav-link text-white" href="{{route('article.index')}}">Tutti gli articoli</a>
-                                </li>
-
-                                <div class="nav-item dropend list-unstyled ">
-                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            </li>
+                             <div class="nav-item dropend list-unstyled ">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Categorie
-                                    </a>
-
-                                    <ul class="dropdown-menu padding-dropdown">
-                                        @foreach ($categories as $category)
-                                        <li><a class="dropdown-item" href="{{route('article.category' , $category)}}">{{$category->name}}</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-
+                                </a>
+                                <ul class="dropdown-menu padding-dropdown">
+                                    @foreach ($categories as $category)
+                                    <li><a class="dropdown-item" href="{{route('article.category' , $category)}}">{{$category->name}}</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                     @endforeach
+                                </ul>
+                            </div>
                         </ul>
                         @guest
 

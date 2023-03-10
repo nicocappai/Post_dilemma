@@ -60,13 +60,7 @@
               <a href="{{route('article.create')}}" class="text-white">Crea annuncio</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Gestione annunci</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Crea il tuo alert</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Gestione alert</a>
+              <a href="{{route('article.index')}}" class="text-white">Tutti gli articoli</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -81,13 +75,7 @@
               <a href="#!" class="text-white">Chi siamo</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Lavora con noi</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Magazine</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Infojobs</a>
+              <a href="{{route('careers.submit')}}" class="text-white">Lavora con noi</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -96,13 +84,18 @@
           <div class=" text-white col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4 text-white">Contatti</h6>
-            <p><i class="fas fa-home me-3 text-white"></i> New York, NY 10012, US</p>
-            <p>
-              <i class="fas fa-envelope me-3 text-white"></i>
-              info@example.com
-            </p>
-            <p><i class="fas fa-phone me-3 text-white"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3 text-white"></i> + 01 234 567 89</p>
+            <p><a href="https://www.linkedin.com/in/nico-cappai-profilo-in/" target="_blank" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a><a href="https://www.linkedin.com/in/nico-cappai-profilo-in/" target="_blank" class="me-4 text-reset">Nico Cappai</a></p>
+            <p><a href="https://www.linkedin.com/in/chiara-lucia-profile/" target="_blank" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a><a href="https://www.linkedin.com/in/chiara-lucia-profile/" target="_blank" class="me-4 text-reset">Chiara Lucia</a></p>
+            <p><a href="https://www.linkedin.com/in/gabrielelegarofal0/" target="_blank" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a><a href="https://www.linkedin.com/in/gabrielelegarofal0/" target="_blank" class="me-4 text-reset">Gabriele Garofalo</a></p>
+            <p><a href="https://www.linkedin.com/in/salvatore-marco-di-candia-a44227267/" target="_blank" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a><a href="https://www.linkedin.com/in/salvatore-marco-di-candia-a44227267/" target="_blank" class="me-4 text-reset">Marco Di Candia</a></p>
           </div>
           <!-- Grid column -->
         </div>
