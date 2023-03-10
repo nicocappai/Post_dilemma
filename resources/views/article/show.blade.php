@@ -13,10 +13,6 @@
                     <p class="card-text pt-3 text-size text-start">{{$article->body}}</p>
                 </div>
                 <div class="col-12 col-md-8 col-lg-6  justify-content-center">
-                    @if(Auth::user() && Auth::user()->is_revisor)
-                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn card-btn text-white my-4 me-4">Accetta articolo</a>
-                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn card-btn text-white my-4 me-4">Rifiuta articolo</a>
-                    @endif
                     <a href="{{route('article.index')}}" class="btn card-btn text-white my-4">Torna indietro</a>
                 </div>
             </div>
