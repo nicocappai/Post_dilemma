@@ -1,6 +1,11 @@
 <x-layout>
 <body class="back-show">
     
+    @if (session('message'))
+    <div class="alert text-center position-message mt-3">
+        <p class="m-0">{{session('message')}}</p>
+    </div>
+    @endif
 
     <div class="container-fluid p-5 text-center text-white">
         <div class="row justify-content-center">
@@ -9,13 +14,7 @@
             </h1>
         </div>
     </div>
-    
-    @if (session('message'))
-        <div class="alert alert-success text-center">
-            {{session('message')}}
-        </div>
-    @endif
-    
+       
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">

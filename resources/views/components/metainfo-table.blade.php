@@ -1,5 +1,5 @@
-<table class="table table-striped table-hover border">
-    <thead class="table-dark">
+<table class="table tableRevisor">
+    <thead>
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nome tag</th>
@@ -18,32 +18,32 @@
             <td>
                 <form action="{{route('admin.editTag' , ['tag'=> $metaInfo])}}" method="POST">
                     @csrf
-                    @method('PUT')
+                    @method('put')
                     <input type="text" name="name" placeholder="Nuovo nome tag" class="form-control w-50 d-inline">
-                    <button type="submit" class="btn btn-success text-white">Aggiorna</button>
+                    <button type="submit" class="btn admin-btn">Aggiorna</button>
                 </form>
             </td>
             <td>
                 <form action="{{route('admin.deleteTag' , ['tag' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger text-white">Elimina</button>
+                    <button type="submit" class="btn adminR-btn">Elimina</button>
                 </form>
             </td>
             @else
             <td>
                 <form action="{{route('admin.editCategory' , ['category' => $metaInfo])}}" method="POST">
                     @csrf
-                    @method('PUT')
+                    @method('put')
                     <input type="text" name="name" placeholder="Nuovo nome categoria" class="form-control w-50 d-inline">
-                    <button type="submit" class="btn btn-success text-white">Aggiorna</button>
+                    <button type="submit" class="btn admin-btn">Aggiorna</button>
                 </form>
             </td>
             <td>
                 <form action="{{route('admin.deleteCategory' , ['category' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger text-white">Elimina</button>
+                    <button type="submit" class="btn adminR-btn">Elimina</button>
                 </form>
             </td>
 

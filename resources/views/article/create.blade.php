@@ -32,7 +32,7 @@
                             <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             </svg>
                             <textarea name="body" id="" cols="30" rows="30" class="form-control bg-textarea text-white
-                            bg-dark" placeholder="Inserisci il testo" value="{{old('body')}}"></textarea>
+                            bg-dark" placeholder="Inserisci il testo">{{old('body')}}</textarea>
                         </div>
                         @error('body')
                         <div class="error text-white text-center">{{$message}}</div>
@@ -46,11 +46,17 @@
                                 @endforeach
                             </select>
                         </div >
-                        <div class="mb-3">
-                          <label for="tags" class="form-label">Tags:</label>
-                          <input name="tags" id="tags" class="form-control" value="{{old('tags')}}">
-                          <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+
+                        <label for="tags" class="form-label text-white mb-0 pb-0">Tags:</label>
+                        <div class="field mb-0 pb-0">
+                            <svg class="input-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            </svg>
+                            <input autocomplete="off" placeholder="Inserisci i tags" class="input-field" type="text" name="tags" value="{{old('title')}}">
                         </div>
+                        <div class="mt-0">
+                            <span class="small fst-italic text-white ms-3 mt-0 pt-0">Dividi ogni tag con una virgola</span>
+                        </div>
+
                         @error('tags')
                         <div class="error text-white text-center">{{$message}}</div>
                         @enderror

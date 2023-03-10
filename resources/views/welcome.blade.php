@@ -42,23 +42,11 @@
         </div>
 
 
-
-
-
-        {{-- <div class="container-fluid sfondo-sezioni mt-5 pt-5">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center sfondo-sezioni">
-                    <h1 class="font z-index-welcome">Ultime pubblicazioni</h1>
-                </div>
-            </div>
-        </div> --}}
-
         <div class="container-fluid  font my-5">
             <div class="row justify-content-center z-index-welcome">
-
-            </div>
-            <div class="col-12 text-center  ">
-                <h1 class="font ">Ultime pubblicazioni</h1>
+                <div class="col-12 text-center  ">
+                    <h1 class="font ">Ultime pubblicazioni</h1>
+                </div>
             </div>
             <div class="row justify-content-center">
                 @foreach ($articles as $article )
@@ -66,26 +54,25 @@
                     <div class="card-wrap" style="width:18rem">
                         <img src="{{Storage::url($article->img)}}" height="" class="img-size">
                         <div class="card-body">
+                            
                             <p class="small fst-italic text-capitalize">
-
-                                @foreach ($article->tags as $tag )
+                            @foreach ($article->tags as $tag)
                                 #{{$tag->name}}
-
-                                @endforeach
+                            @endforeach
                             </p>
+
                             <h5 class="card-title">{{$article->title}}</h5>
                             <p class="card-text">{{$article->subtitle}}</p>
                             <div class=" my-3">
                                 <p class="card-text">{{substr($article->body, 0, 30)}}...</p>
                             </div>
                             @if ($article->category)
-                            <a href="{{route('article.category' , ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
+                            <p class="card-text my-2">Categoria: <a class="href-color fst-italic" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
                             @else
                             <p class="small text-muted fst-italic text-capitalize">
                                 Non Categorizzato
                             </p>
                             @endif
-                            <p class="card-text my-2">Categoria: <a class="href-color" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
                             <div class="card-footer text-center">
                                 <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a class="href-color" href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
                                 <a href="{{route('article.show', compact('article'))}}" class="btn card-btn">Leggi</a>

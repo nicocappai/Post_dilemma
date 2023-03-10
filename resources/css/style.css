@@ -531,6 +531,68 @@ body{
     margin-bottom: 15px;
     text-transform: uppercase;
   }
+
+  .section-btn{
+    border: none;
+    border-radius: 100px;
+    padding: 5px 30px;
+    color: #fff;
+    background-color: #171717;
+    text-transform: uppercase;
+  }
+
+  .section-btn:hover{
+    background-color:  rgb(21, 77, 58);
+    color: white;
+  }
+
+  .admin-btn{
+    border: none;
+    border-radius: 100px;
+    padding: 5px 30px;
+    color: #fff;
+    background-color: rgb(21, 77, 58);
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    margin-right: 4px;
+  }
+
+  .admin-btn:hover{
+    background-color: rgb(21, 77, 58);
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .adminR-btn{
+    border: none;
+    border-radius: 100px;
+    padding: 5px 30px;
+    color: #fff;
+    background-color: rgba(163, 5, 5, 0.859);
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+  }
+
+  .adminR-btn:hover{
+    background-color: rgba(163, 5, 5, 0.859);
+    color: #fff;
+    transform: scale(1.05);
+  }
+
+  .section-btn-revisione{
+    border: none;
+    border-radius: 100px;
+    padding: 5px 30px;
+    color: #fff;
+    background-color: #e6ac26f7;
+    text-transform: uppercase;
+  }
+
+  .section-btn-revisione:hover{
+    background-color: #e6ac26f7;
+    color: black!important;
+  }
+
   .card-btn:hover{
     background-color:  rgb(21, 77, 58);
     color: white
@@ -758,7 +820,7 @@ margin-bottom: 350px;
 .position-message{
   position: relative;
   z-index: 10;
-  background-color: #19875452;
+  background-color: #40a17461;
   margin-left: 20%;
   margin-right: 20%;
   border-radius: 20px;
@@ -778,9 +840,16 @@ margin-bottom: 350px;
   font-weight: bold;
 }
 
-
-
 .error{
   border-radius: 20px;
   background-color: rgba(255, 0, 0, 0.336);
+}
+
+.tableRevisor{
+  background-color: rgb(246, 242, 242);
+  border-radius: 15px;
+}
+
+.table{
+  --bs-table-border-color: #4d6963;
 }

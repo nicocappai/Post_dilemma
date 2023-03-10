@@ -38,37 +38,34 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ArticleRequest $request)
+    public function store(Request $request)
     {
         $request->validate([
-        'title' => 'required|min:3',
-        'subtitle' => 'required|min:3',
-        'body' => 'required|min:3',
-      //  'category' => 'required',
-        'tags' => 'required',
+            'title' => 'required|min:3',
+            'subtitle' => 'required|min:3',
+            'body' => 'required|min:3',
+            'category' => 'required',
+            'tags' => 'required',
 
         ]);
 
-        $article =   Article::create([
+        $article = Article::create([
           'title'=>$request->title,
           'subtitle'=>$request->subtitle,
           'body'=>$request->body,
           'img'=> $request->has('img') ? $request->file('img')->store('public') : 'img/default.png' ,
-         // 'category_id'=>$request->category,
+          'category_id'=>$request->category,
           'user_id'=> Auth::user()->id,
-          'tags' => $request->tags,
-
         ]);
 
-        $tags = explode(',', $request->tags);
+        $tags = explode(', ', $request->tags);
         foreach ($tags as $tag) {
             $newTag = Tag::updateOrCreate([
              'name' => $tag
             ]);
-$article->tags()->attach($newTag);
+        $article->tags()->attach($newTag);
 
         }
-
 
         return redirect(route('homepage'))->with('message','Articolo creato');
     }

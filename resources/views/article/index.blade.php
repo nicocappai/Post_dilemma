@@ -21,7 +21,13 @@
                         <div class=" my-3">
                           <p class="card-text  ">{{substr($article->body, 0, 30)}}...</p>
                       </div>
-                        <p class="card-text">Categoria: <a class="href-color" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
+                      @if ($article->category)
+                      <p class="card-text my-2">Categoria: <a class="href-color fst-italic" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
+                      @else
+                      <p class="small text-muted fst-italic text-capitalize">
+                          Non Categorizzato
+                      </p>
+                      @endif
                       <div class="card-footer text-center">
                         <p class="small fst-italic text-capitalize">
                             @foreach ($article->tags as $tag )

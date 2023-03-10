@@ -1,4 +1,10 @@
 <x-layout>
+    @if (session('message'))
+    <div class="alert text-center position-message">
+        <p class="m-0">{{session('message')}}</p>
+    </div>
+    @endif
+
 <body class="back-show">
     <div class="container-fluid my-3">
         <div class="row justify-content-center">
@@ -31,14 +37,23 @@
                             <option value="writer">Redattore</option>
                         </select>
                     </div>
+                    @error('role')
+                    <div class="error text-white text-center">{{$message}}</div>
+                    @enderror
                     <div class="mb-3">
                       <label for="email" class="form-label text-white">Email</label>
                       <input type="text" name="email" class="form-control" id="email" value="{{old('email') ?? Auth::user()->email}}" >
                     </div>
+                    @error('email')
+                    <div class="error text-white text-center">{{$message}}</div>
+                    @enderror
                     <div class="mb-3">
                       <label for="message" class="form-label text-white">Parlaci di te</label>
                      <textarea name="message" class="form-control" id="message" cols="30" rows="10">{{old('message')}}</textarea>
                     </div>
+                    @error('message')
+                    <div class="error text-white text-center">{{$message}}</div>
+                    @enderror
                     <button type="submit" class="btn btn-careers">Invia la candidatura</button>
                   </form>
             </div>

@@ -19,7 +19,13 @@
                             <div class=" my-3">
                               <p class="card-text">{{substr($article->body, 0, 30)}}...</p>
                           </div>
-                            <p class="card-text">Categoria: <a class="href-color" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
+                          @if ($article->category)
+                          <p class="card-text my-2">Categoria: <a class="href-color fst-italic" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>
+                          @else
+                          <p class="small text-muted fst-italic text-capitalize">
+                              Non Categorizzato
+                          </p>
+                          @endif
                           <div class="card-footer text-center">
                             <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a class="href-color" href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
                               <a href="{{route('article.show', compact('article'))}}" class="btn card-btn">Leggi</a>
