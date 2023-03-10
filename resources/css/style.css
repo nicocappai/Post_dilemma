@@ -418,31 +418,41 @@ body{
 
 .back-video {
   position: absolute;
-  background-size: cover;
+background-size: cover;
+top: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
   background-repeat: no-repeat;
-}
-.altezza-video{
-  height: 85vh;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.0);
+ padding-left: calc(var(--bs-gutter-x) * 0.0);
 }
 
-/* @media (min-aspect-ratio:16/9) {
+
+.altezza-video{
+  height: 110vh;
+}
+
+
+ @media screen and (max-width:870px) {
   .back-video{
 
     width: 100%;
     height: auto;
 
+}
+.black-media-query{
+    color: black;
+}
+.altezza-video{
+    height: 65vh;
   }
 }
 
-@media (max-aspect-ratio:16/9) {
-  .back-video{
-    width: auto;
-    height: 100vh;
-  }
-} */
+
+
+
 
 
 .sfondo-sezioni{
