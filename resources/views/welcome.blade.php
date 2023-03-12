@@ -133,7 +133,9 @@
                                             <span class="green box"></span>
                                         </div>
                                     </div>
-                                    <div class="card__content">
+                                    <div class="card__content ps-3 pe-3 pb-3">
+                                        <i class="fa-regular fa-user"></i><span><i>   Andrea</i></span>
+                                        <p>Il sito è molto ben organizzato e facile da navigare, con una vasta gamma di categorie tra cui scegliere, che vanno dalla tecnologia alla politica, dall'intrattenimento allo sport. C'è sempre qualcosa di nuovo e interessante da leggere.</p>
                                     </div>
                                 </div>
 
@@ -151,7 +153,9 @@
                                             <span class="green box"></span>
                                         </div>
                                     </div>
-                                    <div class="card__content">
+                                    <div class="card__content ps-3 pe-3 pb-3">
+                                        <i class="fa-regular fa-user"></i><span><i>   Giorgia</i></span>
+                                        <p>La qualità degli articoli pubblicati è davvero alta, con autori che dimostrano di avere una conoscenza approfondita del loro argomento. Inoltre, il sito sembra essere molto attento alla revisione degli articoli prima della pubblicazione.</p>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +172,9 @@
                                             <span class="green box"></span>
                                         </div>
                                     </div>
-                                    <div class="card__content">
+                                    <div class="card__content ps-3 pe-3 pb-3">
+                                        <i class="fa-regular fa-user"></i><span><i>   Marco</i></span>
+                                        <p>In generale, sono rimasto molto impressionato dal sito Dilemma.it e lo consiglierei a chiunque sia alla ricerca di una piattaforma di qualità per la pubblicazione e la lettura di articoli.</p>
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +191,9 @@
                                             <span class="green box"></span>
                                         </div>
                                     </div>
-                                    <div class="card__content">
+                                    <div class="card__content ps-3 pe-3 pb-3">
+                                        <i class="fa-regular fa-user"></i><span><i>   Tommaso</i></span>
+                                        <p>Ho recentemente avuto l'opportunità di esplorare il sito Dilemma.it, che offre una piattaforma per la pubblicazione di articoli di vario genere. E devo dire che la mia esperienza è stata molto positiva.</p>
                                     </div>
                                 </div>
                             </div>
@@ -202,7 +210,9 @@
                                             <span class="green box"></span>
                                         </div>
                                     </div>
-                                    <div class="card__content">
+                                    <div class="card__content ps-3 pe-3 pb-3">
+                                        <i class="fa-regular fa-user"></i><span><i>   Sara</i></span>
+                                        <p>Ho lavorato come revisore su Dilemma.it e sono rimasta molto soddisfatta dell'esperienza. La grande varietà di annunci rende il lavoro interessante e vario. Consiglio questo sito come un'ottima opportunità di lavoro.</p>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +229,9 @@
                                             <span class="green box"></span>
                                         </div>
                                     </div>
-                                    <div class="card__content">
+                                    <div class="card__content ps-3 pe-3 pb-3">
+                                        <i class="fa-regular fa-user"></i><span><i>   Giovanni</i></span>
+                                        <p>Come autore, ho avuto l'opportunità di pubblicare alcuni articoli e sono rimasto molto soddisfatto dell'esperienza. Il processo di pubblicazione degli articoli è semplice e veloce. É un'ottima piattaforma per la pubblicazione di articoli.</p>
                                     </div>
                                 </div>
                             </div>

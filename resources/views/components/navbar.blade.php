@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <a href="{{route('homepage')}}">
                         <img class="logo-size" 
-                         src="/images/logo_finale.png" alt="">
+                         src="/images/logo2penna.png" alt="">
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
