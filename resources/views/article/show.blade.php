@@ -14,7 +14,7 @@
                     <p class="card-text pt-3 text-size text-start">{{$article->body}}</p>
                 </div>
                 <div class="col-12 col-md-8 col-lg-6 justify-content-center">
-                @if (Auth::user() && Auth::user()->is_revisor)
+                @if (Auth::user() && Auth::user()->is_revisor && $article->is_accepted == 0)
                     <a href="{{route('revisor.acceptArticle' , compact('article'))}}" class="btn card-btn text-white my-4 mx-2">Accetta articolo</a>
                      <a href="{{route('revisor.rejectArticle' , compact('article'))}}" class="btn card-btn text-white my-4 mx-2">Rifiuta articolo</a>
                 @endif
@@ -22,12 +22,12 @@
                 </div>
             </div>
         </div>
-        <a href="#inizio">
-            <div id="tornasu">
-                <img src= "/images/icon-top.png" class="tornasu" width="60px" height="60px">  
-            </div>
-        </a>
     </body>
+    <a href="#inizio">
+        <div id="tornasu">
+            <img src= "/images/icon-top.png" class="tornasu" width="60px" height="60px">  
+        </div>
+    </a>
 </x-layout>
 
 

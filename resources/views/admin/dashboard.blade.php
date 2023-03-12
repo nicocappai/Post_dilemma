@@ -1,3 +1,4 @@
+<a name="inizio"></a>
 <x-layout>
     <body class="back-show">
 
@@ -74,4 +75,9 @@
             </div>
         </div>
     </body>
+    <a href="#inizio">
+        <div id="tornasu">
+            <img src= "/images/icon-top.png" class="tornasu" width="60px" height="60px">  
+        </div>
+    </a>
 </x-layout>
