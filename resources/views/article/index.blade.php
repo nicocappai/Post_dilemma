@@ -1,5 +1,6 @@
-<x-layout>
-<body class="backg">
+<a name="inizio"></a>
+<x-layout> 
+    <body class="backg">
     <div class="container-fluid my-4">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
@@ -45,6 +46,11 @@
           </div>
           @endforeach
       </div>
-  </div>
+  </div>  
+    <a href="#inizio">
+        <div id="tornasu">
+            <img src= "/images/icon-top.png" class="tornasu" width="60px" height="60px">  
+        </div>
+    </a>
 </body>
 </x-layout>

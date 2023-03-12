@@ -64,3 +64,16 @@ let swiper = new Swiper(".mySwiper", {
       el: ".swiper-pagination",
     },
   });
+
+//   tasto back-to-top
+window.addEventListener("scroll",function(){
+
+    if(window.pageYOffset > 300) {
+    document.getElementById("tornasu").style.display="block";
+    }
+    
+    else {
+    document.getElementById("tornasu").style.display="none";
+    }
+    
+    });

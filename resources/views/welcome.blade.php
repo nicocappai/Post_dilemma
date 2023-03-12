@@ -1,11 +1,11 @@
 
+<a name="inizio"></a>
 <x-layout>
     @if (session('message'))
     <div class="alert text-center position-message mt-3">
         <p class="m-0">{{session('message')}}</p>
     </div>
     @endif
-
 
     <div class="container-fluid altezza-video">
         <div class="row justify-content-center align-items-center">
@@ -235,18 +235,16 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="swiper-pagination">
-
-                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-</div>
-
-    </x-layout>
+    </div>
+    <a href="#inizio">
+        <div id="tornasu">
+            <img src= "images/icon-top.png" class="tornasu" width="60px" height="60px">  
+        </div>
+    </a>
+</x-layout>
