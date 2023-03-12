@@ -47,7 +47,14 @@ class ArticleController extends Controller
             'category' => 'required',
             'tags' => 'required',
 
+        ],
+        [
+            'title.required' => 'Il titolo é richiesto',
+            'subtitle.required' => 'Il sottotitolo é richiesto',
+            'body.required' => 'Il testo é richiesto',
+            'tags.required' => 'I tag sono richiesti',
         ]);
+       
 
         $article = Article::create([
           'title'=>$request->title,

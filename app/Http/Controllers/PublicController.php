@@ -30,7 +30,13 @@ class PublicController extends Controller
         'role'=>'required',
         'email'=>'required|email',
         'message'=>'required',
-       ]);
+       ],
+       [
+        'role.required' => 'Il ruolo é richiesto',
+        'email.required' => 'L\'email è richiesta',
+        'message.required' => 'Il testo è richiesto',
+        ]);
+
        $user = Auth::user();
        $role = $request->role;
        $email = $request->email;

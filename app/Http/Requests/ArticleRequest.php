@@ -29,13 +29,13 @@ class ArticleRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'title.required' => 'Il titolo é richiesto',
-            'subtitle.required' => 'Il sottotitolo é richiesto',
-            'body.required' => 'Il testo é richiesto',
-            'tags.required' => 'I tag sono richiesti',
-        ];
-    }
+    // public function messages()
+    // {
+    //     return [
+    //         'title.required' => 'Il titolo é richiesto',
+    //         'subtitle.required' => 'Il sottotitolo é richiesto',
+    //         'body.required' => 'Il testo é richiesto',
+    //         'tags.required' => 'I tag sono richiesti',
+    //     ];
+    // }
 }
