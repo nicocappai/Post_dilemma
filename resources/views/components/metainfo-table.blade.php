@@ -1,19 +1,19 @@
 <table class="table tableRevisor">
     <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col" class="articoli-form">#</th>
             <th scope="col">Nome tag</th>
-            <th scope="col">Q.ta articoli collegati</th>
-            <th scope="col">Aggiorna</th>
+            <th scope="col" class="articoli-form">Q.ta articoli collegati</th>
+            <th scope="col"><div class="aggiorna"></div>Aggiorna</th>
             <th scope="col">Cancella</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($metaInfos as $metaInfo)
         <tr>
-            <th scope="row">{{$metaInfo->id}}</th>
+            <th scope="row" class="articoli-form">{{$metaInfo->id}}</th>
             <td>{{$metaInfo->name}}</td>
-            <td>{{count($metaInfo->articles)}}</td>
+            <td class="articoli-form">{{count($metaInfo->articles)}}</td>
             @if($metaType == 'tags')
             <td>
                 <form action="{{route('admin.editTag' , ['tag'=> $metaInfo])}}" method="POST">
@@ -27,7 +27,7 @@
                 <form action="{{route('admin.deleteTag' , ['tag' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn adminR-btn">Elimina</button>
+                    <button type="submit" class="btn adminR-btn"><i class="fa-regular fa-trash-can"></i></button>
                 </form>
             </td>
             @else
@@ -43,7 +43,7 @@
                 <form action="{{route('admin.deleteCategory' , ['category' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn adminR-btn">Elimina</button>
+                    <button type="submit" class="btn adminR-btn text-dark"><i class="fa-regular fa-trash-can"></i></button>
                 </form>
             </td>
 

@@ -1,5 +1,6 @@
+<a name="inizio"></a>
 <x-layout>
-<body class="back-show">
+<body class="back-show body-dashboard">
     
     @if (session('message'))
     <div class="alert text-center position-message mt-3">
@@ -15,7 +16,7 @@
         </div>
     </div>
        
-    <div class="container my-5">
+    <div class="container-fluid my-md-5">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Articoli da revisionare</h2>
@@ -24,7 +25,7 @@
         </div>
     </div>
     
-    <div class="container my-5">
+    <div class="container-fluid my-md-5">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Articoli pubblicati</h2>
@@ -33,7 +34,7 @@
         </div>
     </div>
     
-    <div class="container my-5">
+    <div class="container-fluid my-md-5">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Articoli respinti</h2>
@@ -41,5 +42,10 @@
             </div>
         </div>
     </div>
-</body>    
+</body>   
+<a href="#inizio">
+    <div id="tornasu">
+        <img src= "/images/icon-top.png" class="tornasu" width="60px" height="60px">  
+    </div>
+</a> 
 </x-layout>

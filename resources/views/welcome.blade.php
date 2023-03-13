@@ -10,7 +10,7 @@
     <div class="container-fluid altezza-video">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 back-video ">
-                <video width="100%" autoplay loop muted plays-inline class=" ">
+                <video class="video" autoplay loop muted plays-inline class=" ">
                     <source src="/images/video.mp4" type="video/mp4">
                 </video>
             </div>
@@ -236,7 +236,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        {{-- <div class="swiper-pagination"></div> --}}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <a name="inizio"></a>
 <x-layout>
-    <body class="back-show">
+    <body class="back-show media-dashboard body-dashboard">
 
         @if (session('message'))
         <div class="alert text-center position-message mt-3">
@@ -8,7 +8,7 @@
         </div>
         @endif
 
-        <div class="container-fluid p-5  text-center text-white">
+        <div class="container-fluid p-md-5 div-dashboard text-center text-white">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <h1 class="display-1 text-dashboard">
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <div class="container-fluid p-5  text-center text-white">
+        <div class="container-fluid p-md-5 form-dashboard text-center text-white">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <h1 class="display-1 text-dashboard">
@@ -57,17 +57,17 @@
             </div>
         </div>
         
-        <div class="container-fluid p-5  text-center text-white">
+        <div class="container-fluid p-md-5  text-center text-white">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <h1 class="display-1 text-dashboard">
                        Le Categorie della piattaforma
                     </h1>
                     <x-metainfo-table :metaInfos="$categories" metaType="categorie"/>
-                    <form method="POST" action="{{route('admin.storeCategory')}}"  class="d-flex">
+                    <form method="POST" action="{{route('admin.storeCategory')}}"  class="d-flex admin-btn-aggiungi">
                         @csrf
                         <input type="text" name="name" class="form-control m-2" placeholder="Inserisci una nuova categoria">
-                        <button type="submit" class="btn btn bg-success text-white">
+                        <button type="submit" class="btn admin-btn text-white">
                             Aggiungi
                         </button>
                     </form>

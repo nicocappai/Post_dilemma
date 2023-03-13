@@ -429,25 +429,28 @@ top: 0;
  padding-left: calc(var(--bs-gutter-x) * 0.0);
 }
 
+.video{
+  width: 100%;
+}
 
 .altezza-video{
   height: 110vh;
+  width: 100%;
 }
 
 
- @media screen and (max-width:870px) {
+ @media screen and (max-width:950px) {
   .back-video{
-
     width: 100%;
-    height: auto;
-
+    height: 85vh;
 }
-
-.black-media-query{
-    color: black;
+.video{
+  height: 100%;
+  object-fit: cover;
+  object-position:55% 80%;
 }
 .altezza-video{
-    height: 65vh;
+    height: 80vh;
   }
 }
 
@@ -871,3 +874,40 @@ li{
   display: none;
   padding:10px;
   }
+
+@media screen and (max-width: 900px) {
+  .media-dashboard{
+    width: 100%;
+    
+  } 
+  .text-dashboard{
+    font-size: 30px;
+  }
+  .form-dashboard{
+    width: 90%;
+  }
+  .articoli-form{
+    display: none;
+  }
+  
+  .tornasu{
+    display: none;
+  }
+  .form-dashboard{
+    padding-left: 0px;
+  }
+  .aggiorna{
+    display: none;
+  }
+  .admin-btn-aggiungi{
+    padding-bottom: 5px;
+  }
+}
+
+@media only screen and (orientation:portrait) {
+  .body-dashboard {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+}
+
