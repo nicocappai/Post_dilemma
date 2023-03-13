@@ -16,9 +16,9 @@
                 <div class="col-12 col-md-8 col-lg-6 justify-content-center">
                 @if (Auth::user() && Auth::user()->is_revisor && $article->is_accepted == 0)
                     <a href="{{route('revisor.acceptArticle' , compact('article'))}}" class="btn card-btn text-white my-4 mx-2">Accetta articolo</a>
-                     <a href="{{route('revisor.rejectArticle' , compact('article'))}}" class="btn card-btn text-white my-4 mx-2">Rifiuta articolo</a>
+                    <a href="{{route('revisor.rejectArticle' , compact('article'))}}" class="btn card-btn text-white my-4 mx-2">Rifiuta articolo</a>
                 @endif
-                    <a href="{{route('revisor.dashboard')}}" class="btn card-btn text-white mx-2 my-4">Torna indietro</a>
+                    <a href="{{URL::previous()}}" class="btn card-btn text-white mx-2 my-4">Torna indietro</a>
                 </div>
             </div>
         </div>

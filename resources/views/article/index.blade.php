@@ -1,6 +1,6 @@
 <a name="inizio"></a>
 <x-layout> 
-    <body class="backg">
+    <body class="back-show">
     <div class="container-fluid my-4">
         <div class="row justify-content-center">
             <div class="col-12 text-center">

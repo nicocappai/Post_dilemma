@@ -1,7 +1,9 @@
 <x-layout>
     @if (session('message'))
-    <div class="alert text-center position-message">
-        <p class="m-0">{{session('message')}}</p>
+    <div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show">
+        <div class="alert text-center position-message mt-3">
+            <p class="m-0">{{session('message')}}</p>
+        </div>
     </div>
     @endif
 

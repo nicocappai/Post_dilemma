@@ -54,7 +54,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@2.8.2/dist/alpine.min.js"></script>
     <script src="https://kit.fontawesome.com/8234f4d33d.js" crossorigin="anonymous"></script>
     {{-- swiper JS --}}
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

@@ -1,9 +1,12 @@
 
 <a name="inizio"></a>
 <x-layout>
+    <body class="body-welcome">
     @if (session('message'))
-    <div class="alert text-center position-message mt-3">
-        <p class="m-0">{{session('message')}}</p>
+    <div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show">
+        <div class="alert text-center position-message mt-3">
+            <p class="m-0">{{session('message')}}</p>
+        </div>
     </div>
     @endif
 
@@ -247,4 +250,5 @@
             <img src= "images/icon-top.png" class="tornasu" width="60px" height="60px">  
         </div>
     </a>
+</body>
 </x-layout>

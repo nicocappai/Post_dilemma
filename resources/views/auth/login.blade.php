@@ -1,10 +1,12 @@
 <x-layout>
     @if (session('message'))
-    <div class="alert text-center position-message mt-3">
-        <p class="m-0">{{session('message')}}</p>
+    <div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show">
+        <div class="alert text-center position-message mt-3">
+            <p class="m-0">{{session('message')}}</p>
+        </div>
     </div>
     @endif
-    <body class="backg"> 
+    <body class="back-show"> 
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
