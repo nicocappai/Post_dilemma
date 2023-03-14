@@ -4,7 +4,7 @@
             <nav class="navbar navbar-expand-lg bg_color nav-border">
                 <div class="container-fluid">
                     <a href="{{route('homepage')}}">
-                        <img class="logo-size" 
+                        <img class="logo-size"
                          src="/images/logo2penna.png" alt="">
                     </a>
 
@@ -62,6 +62,9 @@
                                         {{App\Models\Article::unrevisionedCount()}}
                                         <span class="visually-hidden">unread messages</span>
                                     </span> --}}
+                                    @endif
+                                    @if(Auth::user()->is_writer)
+                                    <li><a class="dropdown-item" href="{{route('writer.dashboard')}}">Dashboard del Redattore</a></li>
                                     @endif
                                     @if(Auth::user()->is_writer)
                                     <li><a class="dropdown-item" href="{{route('article.create')}}">Crea Articolo</a></li>

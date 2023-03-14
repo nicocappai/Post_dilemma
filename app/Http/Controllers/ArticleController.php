@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Storage;
 class ArticleController extends Controller
 {
 
+
     public function __construct(){
         $this->middleware('auth')->except('index', 'show', 'articleByCategory', 'articleByUser', 'articleSearch');
     }
@@ -62,7 +63,7 @@ class ArticleController extends Controller
             'body.max' => 'Il testo deve essere al massimo di 20.000 caratteri',
             'tags.max' => 'I tag devono essere al massimo di 50 caratteri',
         ]);
-       
+
 
         $article = Article::create([
           'title'=>$request->title,
@@ -100,7 +101,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('article.edit', compact('article'));
     }
 
     /**
@@ -108,7 +109,44 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $request->validate([
+            'title' => 'required|min:4|max:50|unique:articles,title,' .$article->id,
+            'subtitle' => 'required|min:4|max:55|unique:articles,subtitle,' .$article->id,
+            'body' => 'required|min:4|max:20000',
+            'img' => 'img',
+            'category' => 'required',
+            'tags' => 'required|min:3|max:50',
+
+        ]);
+
+        $article->update([
+            'title'=>$request->title,
+            'subtitle'=>$request->subtitle,
+            'body'=>$request->body,
+            'category_id'=>$request->category,
+
+        ]);
+        if($request->img){
+            Storage::delete($article->img);
+            $article->update([
+                'img' => $request->file('img')->store('public/img')
+            ]);
+        }
+
+        $tags = explode(', ', $request->tags);
+        $newTag = [];
+
+        foreach ($tags as $tag) {
+            $newTag[] = Tag::updateOrCreate([
+             'name' => $tag,
+            ]);
+            $newTags[] = $newTag->id;
+        }
+
+$article->tags()->sync($newTags);
+
+        return redirect(route('writer.dashboard'))->with('message','Hai correttamente aggiornato l\' articolo scelto');
+
     }
 
     /**
