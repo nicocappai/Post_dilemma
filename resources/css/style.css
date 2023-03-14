@@ -100,6 +100,15 @@ position: relative;
 
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Slab', serif;
+}
+
+p{
+  font-family: 'Lato', sans-serif;
+  /* text-shadow: 0.01px 1px 4px #000000; */
+}
+
 .font-inserire{
   font-size: 45px;
 }
@@ -554,9 +563,13 @@ top: 0;
   }
   .card-text{
     text-align: center;
-    font-size: 12px;
     margin-bottom: 20px;
   }
+
+  .subtitle-card{
+    font-weight: bold;
+  }
+  
   .card-btn{
     border: none;
     border-radius: 100px;
@@ -617,7 +630,6 @@ top: 0;
   .section-btn-revisione{
     border: none;
     border-radius: 100px;
-    padding: 5px 30px;
     color: #fff;
     background-color: #e6ac26f7;
     text-transform: uppercase;
@@ -958,4 +970,8 @@ li{
 .navbar-toggler{
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border: #40a17461 solid 3px;
+}
+
+#article-body {
+  white-space: pre-wrap;
 }

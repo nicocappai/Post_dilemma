@@ -46,4 +46,8 @@ class Article extends Model
         'category_id',
         'is_accepted',
     ];
+
+    // public static function unrevisionedCount(){
+    //     return Article::where('is_accepted', null)->count();
+    // }
 }

@@ -15,7 +15,7 @@ class ArticleController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth')->except('index', 'show');
+        $this->middleware('auth')->except('index', 'show', 'articleByCategory', 'articleByUser', 'articleSearch');
     }
 
     /**
@@ -41,11 +41,11 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|min:3',
-            'subtitle' => 'required|min:3',
-            'body' => 'required|min:3',
+            'title' => 'required|min:4|max:50',
+            'subtitle' => 'required|min:4|max:55',
+            'body' => 'required|min:4|max:20000',
             'category' => 'required',
-            'tags' => 'required',
+            'tags' => 'required|min:3|max:50',
 
         ],
         [
@@ -53,6 +53,14 @@ class ArticleController extends Controller
             'subtitle.required' => 'Il sottotitolo é richiesto',
             'body.required' => 'Il testo é richiesto',
             'tags.required' => 'I tag sono richiesti',
+            'title.min' => 'Il titolo deve essere più lungo di 3 caratteri',
+            'subtitle.min' => 'Il sottotitolo deve essere più lungo di 3 caratteri',
+            'body.min' => 'Il testo deve essere più lungo di 3 caratteri',
+            'tags.min' => 'I tag devono essere più lunghi di 3 caratteri',
+            'title.max' => 'Il titolo deve essere al massimo di 50 caratteri',
+            'subtitle.max' => 'Il sottotitolo deve essere al massimo di 55 caratteri',
+            'body.max' => 'Il testo deve essere al massimo di 20.000 caratteri',
+            'tags.max' => 'I tag devono essere al massimo di 50 caratteri',
         ]);
        
 
@@ -85,6 +93,7 @@ class ArticleController extends Controller
     {
         return view('article.show', compact('article'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

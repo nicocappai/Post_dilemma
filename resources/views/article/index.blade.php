@@ -17,10 +17,10 @@
 
                       <div class="card-body">
 
-                        <h5 class="card-title">{{$article->title}}</h5>
-                        <p class="card-text">{{$article->subtitle}}</p>
+                        <h5 class="card-title">{{substr($article->title, 0, 25)}}</h5>
+                        <p class="card-text subtitle-card">{{substr($article->subtitle, 0, 30)}}</p>
                         <div class=" my-3">
-                          <p class="card-text  ">{{substr($article->body, 0, 30)}}...</p>
+                          <p class="card-text">{{substr($article->body, 0, 30)}}...</p>
                       </div>
                       @if ($article->category)
                       <p class="card-text my-2">Categoria: <a class="href-color fst-italic" href="{{route('article.category', ['category' => $article->category->id])}}"> {{ $article->category->name}}</a></p>

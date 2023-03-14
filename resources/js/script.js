@@ -75,3 +75,12 @@ window.addEventListener("scroll",function(){
     document.getElementById("tornasu").style.display="none";
     }
     });
+
+    // text-area
+    const input = document.getElementById('myTextarea');
+    const output = document.getElementById('article-body');
+
+    input.addEventListener('input', function() {
+    output.textContent = this.value;
+    });
+

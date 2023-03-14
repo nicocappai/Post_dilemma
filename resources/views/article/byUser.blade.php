@@ -10,7 +10,7 @@
     </div>
 
     <div class="container my-5">
-        <div class="row justy-content-around">
+        <div class="row justify-content-around">
             @foreach ($articles as $article )
             <div class="col-12 col-md-8 col-lg-3 my-5 justify-content-center d-flex">
                 <div class="card-wrap  "style="width:19rem">

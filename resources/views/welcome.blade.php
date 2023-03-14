@@ -51,7 +51,7 @@
         <div class="container-fluid  font my-5">
             <div class="row justify-content-center z-index-welcome">
                 <div class="col-12 text-center  ">
-                    <h1 class="font ">Ultime pubblicazioni</h1>
+                    <h1 class="font">Ultime pubblicazioni</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -67,8 +67,8 @@
                             @endforeach
                             </p>
 
-                            <h5 class="card-title">{{$article->title}}</h5>
-                            <p class="card-text">{{$article->subtitle}}</p>
+                            <h5 class="card-title">{{substr($article->title, 0, 25)}}...</h5>
+                            <p class="card-text subtitle-card">{{substr($article->subtitle, 0, 30)}}...</p>
                             <div class=" my-3">
                                 <p class="card-text">{{substr($article->body, 0, 30)}}...</p>
                             </div>
@@ -99,21 +99,21 @@
                         <div class=" border-bottom linear-counter"></div>
                     </div>
 
-                    <div class="d-flex justify-content-center align-items-center my-3"><p class="ms-2">50% di visualizzazioni in più rispetto agli annunci display tradizionali</p></div>
+                    <div class="d-flex justify-content-center align-items-center my-3"><p class="ms-2 text-center">50% di visualizzazioni in più rispetto agli articoli display tradizionali</p></div>
                 </div>
                 <div class="col-12 col-md-4">
                     <div class="d-flex justify-content-center align-items-center"><p id="secondNumber" class="number mb-0">0</p><p class="number mb-0">X</p></div>
                     <div class="d-flex justify-content-center align-items-center">
                         <div class=" border-bottom linear-counter"></div>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center my-3 "><p class="ms-2">Tasso di coinvolgimento 10 volte superiore rispetto agli annunci display tradizionali</p></div>
+                    <div class="d-flex justify-content-center align-items-center my-3 "><p class="ms-2 text-center">Tasso di coinvolgimento 10 volte superiore rispetto agli articoli display tradizionali</p></div>
                 </div>
                 <div class="col-12 col-md-4">
                     <div class="d-flex justify-content-center align-items-center"><p class="number mb-0">+</p><p id="thirdNumber" class="number mb-0">0</p><p class="number mb-0">%</p></div>
                     <div class="d-flex justify-content-center align-items-center">
                         <div class=" border-bottom linear-counter"></div>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center my-3"><p class="ms-2">Intenzione di acquisto superiore del 18% rispetto agli annunci display tradizionali</p></div>
+                    <div class="d-flex justify-content-center align-items-center my-3"><p class="ms-2 text-center">Intenzione di visualizzazione superiore del 18% rispetto agli articoli display tradizionali</p></div>
                 </div>
             </div>
         </div>

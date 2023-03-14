@@ -13,14 +13,6 @@
                     </button>
 
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                        {{-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
-                            </li>
-                        </ul> --}}
-                        {{-- <div class="spazio">
-
-                        </div> --}}
                         <ul class="navbar-nav me-auto">
                             <li><a class="nav-link text-white" href="{{route('careers')}}">Lavora con noi</a></li>
                              <li class="nav-item">
@@ -66,6 +58,10 @@
                                     @endif
                                     @if(Auth::user()->is_revisor)
                                     <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard del Revisore</a></li>
+                                    {{-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bd-danger">
+                                        {{App\Models\Article::unrevisionedCount()}}
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span> --}}
                                     @endif
                                     @if(Auth::user()->is_writer)
                                     <li><a class="dropdown-item" href="{{route('article.create')}}">Crea Articolo</a></li>

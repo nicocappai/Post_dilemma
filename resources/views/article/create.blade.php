@@ -10,7 +10,7 @@
                         <div class="field">
                             <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             </svg>
-                            <input autocomplete="off" placeholder="Titolo" class="input-field" type="text" name="title" value="{{old('title')}}">
+                            <input autocomplete="off" placeholder="Titolo" class="input-field @error('title') is-invalid @enderror" type="text" name="title" value="{{old('title')}}">
                         </div>
                         @error('title')
                         <div class="error text-white text-center">{{$message}}</div>
@@ -18,7 +18,7 @@
                         <div class="field">
                             <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             </svg>
-                            <input autocomplete="off" placeholder="Username" class="input-field"  type="text" name="subtitle" value="{{old('subtitle')}}">
+                            <input autocomplete="off" placeholder="Sottotitolo" class="input-field @error('subtitle') is-invalid @enderror"  type="text" name="subtitle" value="{{old('subtitle')}}">
                         </div>
                         @error('subtitle')
                         <div class="error text-white text-center">{{$message}}</div>
@@ -31,8 +31,8 @@
                         <div class="field">
                             <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             </svg>
-                            <textarea name="body" id="" cols="30" rows="30" class="form-control bg-textarea text-white
-                            bg-dark" placeholder="Inserisci il testo">{{old('body')}}</textarea>
+                            <textarea name="body" id="myTextarea" cols="30" rows="30" class="form-control bg-textarea text-white
+                            bg-dark @error('body') is-invalid @enderror" placeholder="Inserisci il testo">{{old('body')}}</textarea>
                         </div>
                         @error('body')
                         <div class="error text-white text-center">{{$message}}</div>
@@ -51,7 +51,7 @@
                         <div class="field mb-0 pb-0">
                             <svg class="input-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             </svg>
-                            <input autocomplete="off" placeholder="Inserisci i tags" class="input-field mb-2" type="text" name="tags" value="{{old('title')}}">
+                            <input autocomplete="off" placeholder="Inserisci i tags" class="input-field mb-2" type="text" name="tags" value="{{old('tags')}}">
                         </div>
                         <div class="mt-0">
                             <span class="small fst-italic text-white ms-3 mt-0 pt-0">Dividi ogni tag con una virgola</span>
