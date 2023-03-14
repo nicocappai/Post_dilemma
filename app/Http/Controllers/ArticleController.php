@@ -154,7 +154,11 @@ $article->tags()->sync($newTags);
      */
     public function destroy(Article $article)
     {
-        //
+        foreach ($article->tags as $tag) {
+            $article->tags()->detach($tag);
+        }
+        $article->delete();
+        return redirect(route('writer.dashboard'))->with('message','Hai correttamente eliminato l\' articolo scelto');
     }
 
     public function articleByCategory(Category $category){
