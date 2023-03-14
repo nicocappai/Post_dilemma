@@ -85,7 +85,7 @@ class ArticleController extends Controller
 
         }
 
-        return redirect(route('homepage'))->with('message','Articolo creato');
+        return redirect(route('homepage'))->with('message','Articolo inviato correttamente in revisione');
     }
 
 
@@ -111,9 +111,10 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
+        
         $request->validate([
-            'title' => 'required|min:4|max:50|unique:articles,title,' .$article->id,
-            'subtitle' => 'required|min:4|max:55|unique:articles,subtitle,' .$article->id,
+            'title' => 'required|min:4|max:50|' ,
+            'subtitle' => 'required|min:4|max:55|',
             'body' => 'required|min:4|max:20000',
             'img' => 'img',
             'category' => 'required',
@@ -122,13 +123,14 @@ class ArticleController extends Controller
         ]);
 
         $article->update([
-            'title'=>$request->title,
-            'subtitle'=>$request->subtitle,
-            'body'=>$request->body,
-            'category_id'=>$request->category,
+            'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' => $request->body,
+            'category_id' => $request->category,
             'slug' => Str::slug($request->title),
 
         ]);
+
         if($request->img){
             Storage::delete($article->img);
             $article->update([
@@ -137,18 +139,18 @@ class ArticleController extends Controller
         }
 
         $tags = explode(', ', $request->tags);
-        $newTag = [];
+        $newTags = [];
 
         foreach ($tags as $tag) {
-            $newTag[] = Tag::updateOrCreate([
+            $newTag = Tag::updateOrCreate([
              'name' => $tag,
             ]);
             $newTags[] = $newTag->id;
         }
 
-$article->tags()->sync($newTags);
+        $article->tags()->sync($newTags);
 
-        return redirect(route('writer.dashboard'))->with('message','Hai correttamente aggiornato l\' articolo scelto');
+        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo scelto');
 
     }
 
@@ -161,7 +163,7 @@ $article->tags()->sync($newTags);
             $article->tags()->detach($tag);
         }
         $article->delete();
-        return redirect(route('writer.dashboard'))->with('message','Hai correttamente eliminato l\' articolo scelto');
+        return redirect(route('writer.dashboard'))->with('message','Hai correttamente eliminato l\'articolo scelto');
     }
 
     public function articleByCategory(Category $category){
