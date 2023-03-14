@@ -25,6 +25,7 @@
                           <p class="small text-muted fst-italic text-capitalize justify-content-center d-flex">
                               Non Categorizzato
                           </p>
+                          <span class="card-text small fst-italic text-muted d-flex justify-content-center">Tempo di lettura {{$article->readDuration()}} min</span>
                           @endif
                           <div class="card-footer text-center">
                             <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a class="href-color" href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>

@@ -28,6 +28,7 @@
                       <p class="small text-muted fst-italic text-capitalize justify-content-center d-flex">
                           Non Categorizzato
                       </p>
+                      <span class="card-text small fst-italic text-muted d-flex justify-content-center">Tempo di lettura {{$article->readDuration()}} min</span>
                       @endif
                       <div class="card-footer text-center">
                         <p class="small fst-italic text-capitalize">
@@ -54,3 +55,4 @@
     </a>
 </body>
 </x-layout>
+
