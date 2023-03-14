@@ -19,12 +19,12 @@
     <div class="container-fluid p-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-                <h2>Lavora come amministratore</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus obcaecati sed adipisci molestiae alias odio? Quis, ea! Non facere, animi placeat accusantium sunt nemo, odit velit explicabo voluptatum est ad?</p>
+                <h2><br> Lavora come amministratore</h2>
+                <p>Come amministratore, avrai la responsabilità di gestire la logistica e le risorse del team di scrittura, garantendo la qualità dei risultati e il rispetto delle scadenze.</p>
                 <h2>Lavora come revisore</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores voluptas rem ea, laudantium provident, possimus nisi aut quis ut incidunt ipsa sit soluta commodi perferendis aspernatur asperiores mollitia itaque consequatur!</p>
+                <p> Come revisore, sarai il garante della qualità dei contenuti e ti occuperai di rivedere e correggere gli articoli scritti dal team di scrittura.</p>
                 <h2>Lavora come redattore</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque assumenda sapiente ipsam distinctio voluptatem vel expedita odit saepe unde minus dolores, fugit excepturi tempore fugiat nemo nesciunt debitis. Nam, culpa.</p>
+                <p>Come writer, ti occuperai di creare contenuti originali e coinvolgenti per il nostro pubblico. Se sei motivato, creativo e hai un'ottima padronanza della lingua italiana, inviaci la tua candidatura per far parte del nostro team. Siamo alla ricerca di persone che abbiano voglia di crescere e migliorare continuamente, e che si impegnino a fornire sempre il massimo per raggiungere gli obiettivi. Unisciti a noi per diventare parte di una squadra di professionisti appassionati di scrittura e creatività!</p>
             </div>
 
             <div class="col-12 col-md-6">

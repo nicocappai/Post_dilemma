@@ -68,7 +68,11 @@ body.dark {
 .bg_color-footer{
     background-color:rgb(14, 12, 12);
 }
-
+/* .bg_color-footer{
+  background-image: url(/public/storage/img/artem-gavrysh-F6-U5fGAOik-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
 .alt{
     align-items: center;
 }
@@ -90,6 +94,7 @@ position: relative;
     background-size: cover;
     background-position: 0%;
 }
+
 .altezza {
     height: 40vh;
 }
