@@ -111,12 +111,12 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        
+
         $request->validate([
-            'title' => 'required|min:4|max:50|' ,
-            'subtitle' => 'required|min:4|max:55|',
+            'title' => 'required|min:4|max:50|unique:articles,title,' . $article->id,
+            'subtitle' => 'required|min:4|max:55|unique:articles,subtitle,' . $article->id,
             'body' => 'required|min:4|max:20000',
-            'img' => 'img',
+            'img' => 'image',
             'category' => 'required',
             'tags' => 'required|min:3|max:50',
 
