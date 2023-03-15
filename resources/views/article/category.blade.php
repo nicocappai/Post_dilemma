@@ -17,8 +17,11 @@
                     <div class=" card-wrap" style="width:18rem">
                         <img src="{{Storage::url($article->img)}}" height="" class="img-size">
                         <div class="card-body ">
-                            <h5 class="card-title ">{{$article->title}}</h5>
-                            <p class="card-text">{{$article->subtitle}}</p>
+                            <h5 class="card-title ">{{substr($article->title, 0, 20)}}</h5>
+                            <p class="card-text">{{substr($article->subtitle, 0, 30)}}</p>
+                            <div class=" my-3">
+                                <p class="card-text  ">{{substr($article->body, 0, 30)}}...</p>
+                            </div>
                             <div class="card-footer text-center">
                                 <p class="card-text"> redatto il {{$article->created_at->format('d/m/Y')}} da <a class="href-color" href="{{route('user.article', ['user' => $article->user->id])}}"> {{ $article->user->name}}</a></p>
                                 <a href="{{route('article.show', compact('article'))}}" class="btn card-btn">Leggi</a>

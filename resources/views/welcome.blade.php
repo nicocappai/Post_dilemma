@@ -67,7 +67,7 @@
                             @endforeach
                             </p>
 
-                            <h5 class="card-title">{{substr($article->title, 0, 25)}}...</h5>
+                            <h5 class="card-title">{{substr($article->title, 0, 20)}}</h5>
                             <p class="card-text subtitle-card">{{substr($article->subtitle, 0, 30)}}...</p>
                             <div class=" my-3">
                                 <p class="card-text">{{substr($article->body, 0, 30)}}...</p>

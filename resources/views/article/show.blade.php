@@ -7,8 +7,8 @@
                     <img src="{{Storage::url($article->img)}}" class="img-fluid img-show-articolo " alt="...">
                 </div>
                 <div class="col-6 col-md-3 col-lg-3 flex-column d-flex align-items-center justify-content-center">
-                    <h2 class="my-4 text-center">{{$article->title}}</h2>
-                    <h5 class="my-4 text-center">{{$article->subtitle}}</h5>
+                    <h2 class="my-4 text-center">{{substr($article->title, 0, 20)}}</h2>
+                    <h5 class="my-4 text-center">{{substr($article->subtitle, 0, 30)}}</h5>
                     <p class="card-text text-size">Redatto da {{$article->user->name}} il {{$article->created_at->format('d/m/Y')}}</p>
                 </div>
                 <div class="col-12  my-5 p-5 ">
