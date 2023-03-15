@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg_color-footer text-muted font  pb-4">
+<footer class="text-center text-lg-start bg_color-footer text-muted font  pb-4 mt-5">
    <!-- Section: Social media -->
    <section class="d-flex justify-content-center justify-content-lg-between text-white p-4 border-bottom">
     <!-- Left -->
@@ -9,23 +9,13 @@
     <!-- Left -->
 
     <!-- Right -->
+
     <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
+
+      <a href="https://www.linkedin.com/feed/" target="_blank" class="me-4 text-reset">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="" class="me-4 text-reset">
+      <a href="https://github.com/Hackademy64/Post_Dilemma" target="_blank" class="me-4 text-reset">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -96,6 +86,9 @@
             <p><a href="https://www.linkedin.com/in/salvatore-marco-di-candia-a44227267/" target="_blank" class="me-4 text-reset">
               <i class="fab fa-linkedin"></i>
             </a><a href="https://www.linkedin.com/in/salvatore-marco-di-candia-a44227267/" target="_blank" class="me-4 text-reset">Marco Di Candia</a></p>
+            <p><a href="https://www.linkedin.com/in/alessio-massaro-5a209a267/" target="_blank" class="me-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+              </a><a href="https://www.linkedin.com/in/alessio-massaro-5a209a267/" target="_blank" class="me-4 text-reset">Alessio Massaro</a></p>
           </div>
           <!-- Grid column -->
         </div>
