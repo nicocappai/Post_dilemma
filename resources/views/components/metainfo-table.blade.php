@@ -43,7 +43,7 @@
                 <form action="{{route('admin.deleteCategory' , ['category' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn adminR-btn text-dark"><i class="fa-regular fa-trash-can"></i></button>
+                    <button type="submit" class="btn adminR-btn text-white"><i class="fa-regular fa-trash-can"></i></button>
                 </form>
             </td>
 

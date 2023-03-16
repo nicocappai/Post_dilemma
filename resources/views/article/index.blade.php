@@ -1,5 +1,5 @@
 <a name="inizio"></a>
-<x-layout> 
+<x-layout>
     <body class="back-show">
     <div class="container-fluid my-4">
         <div class="row justify-content-center">
@@ -28,8 +28,8 @@
                       <p class="small text-muted fst-italic text-capitalize justify-content-center d-flex">
                           Non Categorizzato
                       </p>
-                      <span class="card-text small fst-italic text-muted d-flex justify-content-center">Tempo di lettura {{$article->readDuration()}} min</span>
                       @endif
+                      <span class="card-text small fst-italic text-muted d-flex justify-content-center">Tempo di lettura {{$article->readDuration()}} min</span>
                       <div class="card-footer text-center">
                         <p class="small fst-italic text-capitalize">
                             @foreach ($article->tags as $tag )
@@ -47,10 +47,10 @@
           </div>
           @endforeach
       </div>
-  </div>  
+  </div>
     <a href="#inizio">
         <div id="tornasu">
-            <img src= "/images/icon-top.png" class="tornasu" width="60px" height="60px">  
+            <img src= "/images/icon-top.png" class="tornasu" width="60px" height="60px">
         </div>
     </a>
 </body>
